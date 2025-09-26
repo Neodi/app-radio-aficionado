@@ -9,6 +9,8 @@ import time
 import json
 import os
 from dotenv import load_dotenv
+import requests
+from urllib.parse import urlparse
 
 
 def setup_driver():
@@ -44,6 +46,24 @@ def deny_cookies(driver):
     except Exception as e:
         print(f"No se pudo hacer clic en el botón de cookies: {e}")
 
+def download_image(image_url, filename):
+    """Descarga una imagen desde una URL."""
+    try:
+        response = requests.get(image_url)
+        response.raise_for_status()
+        
+        # Crear directorio si no existe
+        os.makedirs("preguntas/imagenes", exist_ok=True)
+        
+        with open(f"preguntas/imagenes/{filename}", "wb") as file:
+            file.write(response.content)
+        
+        print(f"Imagen descargada: {filename}")
+        return True
+    except Exception as e:
+        print(f"Error al descargar imagen {filename}: {e}")
+        return False
+
 def extract_quiz_data(driver):
     """Extrae los datos del cuestionario de la página."""
     try:
@@ -59,6 +79,28 @@ def extract_quiz_data(driver):
         for i, question in enumerate(questions):
             title_element = question.find_element(By.CLASS_NAME, "quiz-question-title")
             question_title = title_element.text.strip()
+
+            # Buscar imagen en el título de la pregunta
+            image_url = None
+            image_filename = None
+            try:
+                image_element = question.find_element(By.CSS_SELECTOR, ".quiz-question-image img")
+                image_url = image_element.get_attribute("src")
+                
+                if image_url:
+                    # Crear nombre de archivo único
+                    question_id = question.get_attribute("data-question-id")
+                    parsed_url = urlparse(image_url)
+                    file_extension = parsed_url.path.split('.')[-1] if '.' in parsed_url.path else 'png'
+                    image_filename = f"pregunta_{question_id}_{i+1}.{file_extension}"
+                    
+                    # Descargar imagen
+                    if download_image(image_url, image_filename):
+                        print(f"Imagen asociada a pregunta {i+1}: {image_filename}")
+                    
+            except:
+                # No hay imagen en esta pregunta
+                pass
 
             # Extraer todas las respuestas
             answer_labels = question.find_elements(By.CLASS_NAME, "quiz-question-answer-ctrl-lbl")
@@ -81,7 +123,8 @@ def extract_quiz_data(driver):
             question_data = {
                 "question": question_title,
                 "answers": answers,
-                "correct_answer": correct_answer
+                "correct_answer": correct_answer,
+                "image": image_filename if image_filename else None
             }
             quiz_data.append(question_data)
             print(f"Pregunta extraída: {question_title[:50]}... | Correcta: {correct_answer[:30] if correct_answer else 'No encontrada'}...")
@@ -124,6 +167,7 @@ def main():
     if quiz_data:
         save_quiz_data_to_json(quiz_data)
 
+    input("Presiona Enter para cerrar el navegador...")
     driver.quit()
 
 if __name__ == "__main__":

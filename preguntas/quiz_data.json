@@ -1,63 +1,58 @@
 [
   {
-    "question": "Las antenas Yagi:",
+    "question": "La velocidad de propagación de las ondas electromagnéticas en el vacio es de:",
     "answers": [
-      "Son directivas",
-      "Son omnidireccionales",
-      "Solo tienen reflector y dipolo",
-      "Solo tienen dipolo y directores"
+      "300.000 km/s",
+      "300.000 km/h",
+      "300.000 m/s",
+      "300.000 m/h"
     ],
-    "correct_answer": "Son directivas"
+    "correct_answer": "300.000 km/s",
+    "image": null
   },
   {
-    "question": "Si al emitir en la banda de 2 metros se tiene conocimiento de que se producen interferencias al Servicio Móvil Aeronáutico, deberá:",
+    "question": "¿Cual es la impedancia de salida típica en los transmisores de radioaficionado?:",
     "answers": [
-      "Emitir con menos potencia",
-      "Seguir emitiendo",
-      "Dejar de emitir",
-      "Comunicárselo al aeropuerto"
+      "1000 ohmios",
+      "12´5 ohmios",
+      "50 ohmios",
+      "125 ohmios"
     ],
-    "correct_answer": "Dejar de emitir"
+    "correct_answer": "50 ohmios",
+    "image": null
   },
   {
-    "question": "La velocidad de propagación de las ondas electromagnéticas siempre es igual a:",
+    "question": "Si queremos sintonizar una frecuencia de 7 MHz en un receptor que tiene una frecuencia intermedia de 9 MHz, ¿cuál deberá ser la frecuencia del oscilador local?:",
     "answers": [
-      "La frecuencia dividida por la longitud de onda",
-      "La longitud de onda dividida por la frecuencia",
-      "La longitud de onda multiplicada por la frecuencia",
-      "300.000 Km/seg"
+      "63 MHz",
+      "79 MHz",
+      "16 MHz",
+      "8 MHz"
     ],
-    "correct_answer": "La longitud de onda multiplicada por la frecuencia"
+    "correct_answer": "16 MHz",
+    "image": null
   },
   {
-    "question": "Una instalación radioeléctrica con desadaptación de impedancias entre el transmisor y la antena podrá producir:",
+    "question": "¿Cual de los siguientes conceptos puede ser motivo de generación de interferencias?:",
     "answers": [
-      "Interferencias",
-      "Una mayor potencia radiada",
-      "Acoplamiento magnético de alta frecuencia",
-      "Componentes de campo ajustados a impedancia nula"
+      "La sensibilidad",
+      "La amigabilidad",
+      "La intermodulación",
+      "Clase de emisión"
     ],
-    "correct_answer": "Interferencias"
+    "correct_answer": "La intermodulación",
+    "image": null
   },
   {
-    "question": "Un transformador está formado por al menos:",
+    "question": "¿A qué se suele llamar \"frecuencias imagen\" en un receptor?:",
     "answers": [
-      "Un circuito resonante serie",
-      "Dos resistencias con propiedades ferromagnéticas",
-      "Bobinas con rectificadores de onda completa",
-      "Dos bobinas acopladas"
+      "A las frecuencias portadoras de las imágenes",
+      "A las frecuencias dos veces mayor que las intermedias, por encima y por debajo de las frecuencias centrales originales",
+      "A las partes imaginarias de las frecuencias",
+      "A las simetrías de de cada frecuencia"
     ],
-    "correct_answer": "Dos bobinas acopladas"
-  },
-  {
-    "question": "¿Qué es un diodo?",
-    "answers": [
-      "Elemento que filtra la corriente eléctrica",
-      "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
-      "Componente eléctrico que elimina espurias",
-      "Dispositivo limitador de potencia"
-    ],
-    "correct_answer": "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido"
+    "correct_answer": "A las frecuencias dos veces mayor que las intermedias, por encima y por debajo de las frecuencias centrales originales",
+    "image": null
   },
   {
     "question": "La forma más común de propagación en VHF y UHF es por:",
@@ -67,227 +62,74 @@
       "Onda ionosférica",
       "Onda reflejada"
     ],
-    "correct_answer": "Onda directa"
+    "correct_answer": "Onda directa",
+    "image": null
   },
   {
-    "question": "Se denomina frecuencia intermedia (FI) a:",
+    "question": "En relación con las baterías es correcto afirmar que:",
     "answers": [
-      "La frecuencia empleada en los receptores de conversión directa",
-      "La frecuencia comprendida entre la inferior y la superior de las sintonizadas",
-      "La frecuencia de trabajo del oscilador local",
-      "La frecuencia de valor constante utilizada en los receptores superheterodinos"
+      "No se pueden conectar en serie",
+      "Sólo se pueden conectar en paralelo",
+      "La tensión de un conjunto conectadas en serie es la suma de las tensiones de cada una de ellas",
+      "Transforman la energía eléctrica en magnética"
     ],
-    "correct_answer": "La frecuencia de valor constante utilizada en los receptores superheterodinos"
+    "correct_answer": "La tensión de un conjunto conectadas en serie es la suma de las tensiones de cada una de ellas",
+    "image": null
   },
   {
-    "question": "El campo eléctrico se expresa en:",
-    "answers": [
-      "V.m",
-      "W/m",
-      "Q/s",
-      "V/m"
-    ],
-    "correct_answer": "V/m"
-  },
-  {
-    "question": "En un receptor, la capacidad de mantener la frecuencia sintonizada se denomina:",
-    "answers": [
-      "Sintonía fina",
-      "Sensibilidad",
-      "Selectividad",
-      "Estabilidad"
-    ],
-    "correct_answer": "Estabilidad"
-  },
-  {
-    "question": "De la batería de un portátil, donde figure la siguiente inscripción “DC 7.4 v - 1500 mAh”, se puede afirmar que podrá proporcionar:",
-    "answers": [
-      "7,4 voltios y 1,5 amperios durante una hora",
-      "1,5 voltios y 7,4 amperios durante una hora",
-      "7,4 voltios y 1500 amperios durante una hora",
-      "7,4 voltios y 1500 amperios durante media hora"
-    ],
-    "correct_answer": "7,4 voltios y 1,5 amperios durante una hora"
-  },
-  {
-    "question": "Un termistor de tipo NTC es:",
-    "answers": [
-      "Un transistor con alto coeficiente de temperatura",
-      "Un diodo rectificador para circuitos de corriente elevada",
-      "Una resistencia cuyo valor se reduce a medida que la temperatura aumenta",
-      "Un divisor de tensión en función de la temperatura externa"
-    ],
-    "correct_answer": "Una resistencia cuyo valor se reduce a medida que la temperatura aumenta"
-  },
-  {
-    "question": "La característica de un filtro denominada como “frecuencia de corte” es:",
-    "answers": [
-      "La frecuencia central del filtro",
-      "El primer armónico de la frecuencia a la que el filtro deja de funcionar",
-      "La frecuencia que delimita la banda de paso o no paso por el filtro",
-      "Un dato irrelevante para el filtro"
-    ],
-    "correct_answer": "La frecuencia que delimita la banda de paso o no paso por el filtro"
-  },
-  {
-    "question": "La región angular comprendida entre las dos líneas gruesas del siguiente diagrama de radiación de una antena, se denomina:",
-    "answers": [
-      "Polarización",
-      "Relación delante-atrás",
-      "Ancho de haz de radiación",
-      "Región de campo radiado"
-    ],
-    "correct_answer": "Ancho de haz de radiación"
-  },
-  {
-    "question": "La anchura de banda necesaria de un transmisor:",
-    "answers": [
-      "Es la máxima anchura de banda permitida al transmisor",
-      "Es la necesaria para lograr transmitir a la máxima distancia",
-      "Es la suficiente para permitir la transmisión a la velocidad y calidad requeridas",
-      "Es aquella que contiene el 99% de la potencia emitida por el transmisor"
-    ],
-    "correct_answer": "Es la suficiente para permitir la transmisión a la velocidad y calidad requeridas"
-  },
-  {
-    "question": "La polarización de una antena es:",
-    "answers": [
-      "La relación entre la impedancia de entrada y la potencia transmitida",
-      "La orientación del campo eléctrico transmitido",
-      "El cociente entre la ganancia y la directividad",
-      "La orientación del campo magnético transmitido"
-    ],
-    "correct_answer": "La orientación del campo eléctrico transmitido"
-  },
-  {
-    "question": "En un transformador eléctrico, ¿qué se conoce como “relación de transformación”?:",
-    "answers": [
-      "El tamaño del primario frente al secundario",
-      "La relación entre las espiras mayores y las menores del primario",
-      "La separación entre la entrada y la salida",
-      "La relación entre el número de espiras del primario y el número de espiras del secundario"
-    ],
-    "correct_answer": "La relación entre el número de espiras del primario y el número de espiras del secundario"
-  },
-  {
-    "question": "Los osciladores a cristal de cuarzo generan una señal:",
-    "answers": [
-      "De frecuencia muy estable",
-      "Variable en función de la impedancia del circuito",
-      "Poco estable no utilizándose en la actualidad",
-      "Modulada en banda lateral única"
-    ],
-    "correct_answer": "De frecuencia muy estable"
-  },
-  {
-    "question": "El “Factor de calidad, Q” de un circuito resonante es:",
-    "answers": [
-      "La relación que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda",
-      "Independiente de la frecuencia",
-      "La relación entre la onda estacionaria y el ancho de banda del circuito",
-      "Inexistente"
-    ],
-    "correct_answer": "La relación que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda"
-  },
-  {
-    "question": "Señale el diagrama de radiación correspondiente a una antena Yagi:",
+    "question": "El esquema de un transmisor básico para banda lateral única se corresponde con la figura:",
     "answers": [
       "",
       "",
       "",
       ""
     ],
-    "correct_answer": ""
+    "correct_answer": "",
+    "image": null
   },
   {
-    "question": "El medidor comúnmente denominado “s-meter” indica:",
+    "question": "Cuando se expresa una cantidad en dBm, ¿a qué magnitud se refiere?:",
     "answers": [
-      "La relación de onda estacionaria",
-      "La estabilidad del receptor",
-      "La intensidad de la señal de entrada del receptor",
-      "El consumo de potencia de alimentación"
+      "Corriente eléctrica",
+      "Diferencia de potencial eléctrico",
+      "Potencia eléctrica",
+      "Longitud de onda"
     ],
-    "correct_answer": "La intensidad de la señal de entrada del receptor"
+    "correct_answer": "Potencia eléctrica",
+    "image": null
   },
   {
-    "question": "El detector de producto se emplea para:",
+    "question": "Cuando la impedancia de la antena, de la línea de transmisión y de salida del emisor, coinciden:",
     "answers": [
-      "Mezclar con mínima distorsión la señal recibida",
-      "La etapa detectora en los receptores de banda lateral única",
-      "Obtener la frecuencia intermedia en los receptores de FM",
-      "Limitar los niveles de la señal antes de su amplificación"
+      "Se transfiere la máxima energía a la antena",
+      "La corriente que circula es cero",
+      "Su impedancia dependerá de la altura",
+      "Habrá que adaptarla con un balun relación 1:1"
     ],
-    "correct_answer": "La etapa detectora en los receptores de banda lateral única"
+    "correct_answer": "Se transfiere la máxima energía a la antena",
+    "image": null
   },
   {
-    "question": "La diferencia de potencial eléctrico se mide en:",
+    "question": "El valor de la resistencia total resultante de asociar varias resistencias en serie:",
     "answers": [
-      "Vatios",
-      "Faradios",
-      "Microfaradios",
-      "Voltios"
+      "Es mayor que el valor de cualquiera de las resistencias",
+      "Es igual al valor de la mayor de las resistencias",
+      "Es menor que cualquiera las resistencias",
+      "Es igual al valor de la menor de las resistencias"
     ],
-    "correct_answer": "Voltios"
+    "correct_answer": "Es mayor que el valor de cualquiera de las resistencias",
+    "image": null
   },
   {
-    "question": "En el siguiente esquema, el transmisor, la línea de alimentación y la antena tienen la misma impedancia a la frecuencia de trabajo, por lo que el vatímetro indicará que:",
+    "question": "En el siguiente esquema eléctrico el diodo está actuando como:",
     "answers": [
-      "La potencia reflejada es cero",
-      "La potencia directa es cero",
-      "La potencia reflejada es igual a la potencia directa",
-      "La potencia reflejada es superior a la potencia directa"
+      "Amplificador de tensión",
+      "Detector de envolvente",
+      "Filtro paso banda",
+      "Rectificador de onda completa"
     ],
-    "correct_answer": "La potencia reflejada es cero"
-  },
-  {
-    "question": "De las siguientes bandas de frecuencias la más adecuada para comunicaciones por satélite se corresponde con:",
-    "answers": [
-      "HF",
-      "MF",
-      "LF",
-      "VHF"
-    ],
-    "correct_answer": "VHF"
-  },
-  {
-    "question": "¿Qué valor indicará un medidor de ondas estacionarias, en el caso de un acoplamiento óptimo entre un transmisor y una antena?:",
-    "answers": [
-      "Cero",
-      "Diez",
-      "Dos",
-      "Uno"
-    ],
-    "correct_answer": "Uno"
-  },
-  {
-    "question": "En un circuito con dos resistencias en paralelo, la intensidad total será:",
-    "answers": [
-      "La suma de las caídas de tensión",
-      "La misma que la que circule por la rama con la menor resistencia",
-      "La misma que la que circule por la rama con la mayor resistencia",
-      "La suma de las intensidades de cada una de las ramas"
-    ],
-    "correct_answer": "La suma de las intensidades de cada una de las ramas"
-  },
-  {
-    "question": "¿Qué se entiende por “Procesador Digital de Señal” (DSP)?:",
-    "answers": [
-      "Es un dispositivo para suspensión de periodos",
-      "Es un sistema con Hardware y Software optimizados para aplicaciones que requieran un procesamiento digital de la señal a muy alta velocidad",
-      "Es un ondulador para hacer señales cuadradas",
-      "Es un duplicador de frecuencias digitales"
-    ],
-    "correct_answer": "Es un sistema con Hardware y Software optimizados para aplicaciones que requieran un procesamiento digital de la señal a muy alta velocidad"
-  },
-  {
-    "question": "¿Qué banda de frecuencias presenta mejores condiciones para la propagación por reflexión ionosférica?",
-    "answers": [
-      "HF",
-      "UHF",
-      "SHF",
-      "EHF"
-    ],
-    "correct_answer": "HF"
+    "correct_answer": "Detector de envolvente",
+    "image": "pregunta_422_12.png"
   },
   {
     "question": "Cuando una instalación de radioaficionado afecta o interfiere a una ICT (Infraestructura Común de Telecomunicaciones):",
@@ -297,6 +139,194 @@
       "Se comunica al presidente de la comunidad",
       "Se debe apagar la instalación de ICT"
     ],
-    "correct_answer": "Se tiene que dejar de emitir, al menos temporalmente"
+    "correct_answer": "Se tiene que dejar de emitir, al menos temporalmente",
+    "image": null
+  },
+  {
+    "question": "Un transistor bipolar está compuesto por:",
+    "answers": [
+      "Base, colector y drenador",
+      "Emisor, base y colector",
+      "Fuente, base y emisor",
+      "Emisor, colector y puerta"
+    ],
+    "correct_answer": "Emisor, base y colector",
+    "image": null
+  },
+  {
+    "question": "En un circuito con dos resistencias en paralelo, la intensidad total será:",
+    "answers": [
+      "La suma de las caídas de tensión",
+      "La misma que la que circule por la rama con la menor resistencia",
+      "La misma que la que circule por la rama con la mayor resistencia",
+      "La suma de las intensidades de cada una de las ramas"
+    ],
+    "correct_answer": "La suma de las intensidades de cada una de las ramas",
+    "image": null
+  },
+  {
+    "question": "Dados dos receptores, A y B, con las siguientes curvas de respuesta en amplitud para cada uno de ellos, a una Frecuencia Intermedia de 455 kHz, se puede afirmar que:",
+    "answers": [
+      "El receptor B es más selectivo que el receptor A",
+      "El receptor A es más selectivo que el receptor B",
+      "El receptor A es más sensible que el receptor B",
+      "El receptor B es más estable que el receptor A"
+    ],
+    "correct_answer": "El receptor A es más selectivo que el receptor B",
+    "image": "pregunta_134_16.png"
+  },
+  {
+    "question": "En armónicos producidos por circuitos no lineales:",
+    "answers": [
+      "Solo existen los de segundo orden",
+      "La frecuencia de los de segundo orden es doble de la fundamental",
+      "Los de segundo orden siempre son despreciables",
+      "Los equipos modernos nunca producen armónicos"
+    ],
+    "correct_answer": "La frecuencia de los de segundo orden es doble de la fundamental",
+    "image": null
+  },
+  {
+    "question": "En un circuito electrónico, un transistor no se puede emplear como:",
+    "answers": [
+      "Amplificador",
+      "Oscilador",
+      "Mezclador",
+      "Balun"
+    ],
+    "correct_answer": "Balun",
+    "image": null
+  },
+  {
+    "question": "Los osciladores a cristal de cuarzo generan una señal:",
+    "answers": [
+      "De frecuencia muy estable",
+      "Variable en función de la impedancia del circuito",
+      "Poco estable no utilizándose en la actualidad",
+      "Modulada en banda lateral única"
+    ],
+    "correct_answer": "De frecuencia muy estable",
+    "image": null
+  },
+  {
+    "question": "Las ondas de radio son de naturaleza:",
+    "answers": [
+      "Eléctrica",
+      "Magnética",
+      "Electromagnética",
+      "Acústica"
+    ],
+    "correct_answer": "Electromagnética",
+    "image": null
+  },
+  {
+    "question": "El índice de modulación caracteriza a:",
+    "answers": [
+      "La modulación de amplitud",
+      "La distorsión del modulador",
+      "La modulación de frecuencia",
+      "La ganancia de modulación"
+    ],
+    "correct_answer": "La modulación de frecuencia",
+    "image": null
+  },
+  {
+    "question": "¿Qué bandas de frecuencia son más idóneas para conseguir una comunicación mediante “rebote lunar”?:",
+    "answers": [
+      "Ninguna",
+      "Todas",
+      "VLF",
+      "VHF y superiores"
+    ],
+    "correct_answer": "VHF y superiores",
+    "image": null
+  },
+  {
+    "question": "El silenciador (squelch) de un receptor permite:",
+    "answers": [
+      "Mantener constante el nivel de la señal demodulada",
+      "Mejorar el factor de ruido",
+      "Suprimir el audio si no hay señal de RF",
+      "Aumentar la selectividad del receptor"
+    ],
+    "correct_answer": "Suprimir el audio si no hay señal de RF",
+    "image": null
+  },
+  {
+    "question": "En un circuito eléctrico de corriente continua:",
+    "answers": [
+      "La intensidad está en razón inversa a la tensión",
+      "La resistencia es variable con la tensión",
+      "La intensidad está en razón directa a la tensión",
+      "La capacidad del circuito disminuye"
+    ],
+    "correct_answer": "La intensidad está en razón directa a la tensión",
+    "image": null
+  },
+  {
+    "question": "¿Qué se debería encontrar siempre antes de la toma de antena en un emisor?:",
+    "answers": [
+      "Un interruptor",
+      "El mezclador",
+      "La etapa de potencia",
+      "Un filtro paso bajo o paso banda"
+    ],
+    "correct_answer": "Un filtro paso bajo o paso banda",
+    "image": null
+  },
+  {
+    "question": "Un transformador está formado por al menos:",
+    "answers": [
+      "Un circuito resonante serie",
+      "Dos resistencias con propiedades ferromagnéticas",
+      "Bobinas con rectificadores de onda completa",
+      "Dos bobinas acopladas"
+    ],
+    "correct_answer": "Dos bobinas acopladas",
+    "image": null
+  },
+  {
+    "question": "Unidades eléctricas:",
+    "answers": [
+      "La intensidad se mide en voltios",
+      "La tensión se mide en vatios",
+      "Un culombio es igual al producto de un amperio por segundo",
+      "La tensión se mide en amperios"
+    ],
+    "correct_answer": "Un culombio es igual al producto de un amperio por segundo",
+    "image": null
+  },
+  {
+    "question": "El Control Automático de Nivel conocido como ALC permite:",
+    "answers": [
+      "Aumentar el ancho de banda del filtro de frecuencia intermedia",
+      "Ajustar la ganancia de radiofrecuencia del receptor",
+      "Evitar emisiones interferentes alrededor de la frecuencia de trabajo",
+      "Trasmitir modos digitales utilizando el conector de micrófono de la emisora"
+    ],
+    "correct_answer": "Evitar emisiones interferentes alrededor de la frecuencia de trabajo",
+    "image": null
+  },
+  {
+    "question": "En una antena pasiva, se puede afirmar que:",
+    "answers": [
+      "La ganancia es igual a la directividad",
+      "La ganacia es superior a la directividad",
+      "Los diagramas de radiación en transmisión y en recepción son iguales",
+      "La impedancia es constante con la frecuencia"
+    ],
+    "correct_answer": "Los diagramas de radiación en transmisión y en recepción son iguales",
+    "image": null
+  },
+  {
+    "question": "Se conoce como \"selectividad\" de un receptor:",
+    "answers": [
+      "El grado de selección efectuado en la fabricación",
+      "El número de bandas de frecuencia que puede seleccionar",
+      "La capacidad que tiene para separar dos señales de frecuencias próximas",
+      "La diferencia que existe entre la señal sintonizada y el ruido"
+    ],
+    "correct_answer": "La capacidad que tiene para separar dos señales de frecuencias próximas",
+    "image": null
   }
 ]

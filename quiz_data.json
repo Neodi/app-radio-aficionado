@@ -1,0 +1,272 @@
+[
+  {
+    "question": "A una potencia de valor 1000 mW le corresponde un valor en dB de:",
+    "answers": [
+      "30 dBm",
+      "3dBw",
+      "-3dBm",
+      "0 dBm"
+    ]
+  },
+  {
+    "question": "Si aumenta la temperatura en un conductor:",
+    "answers": [
+      "Aumenta su resistencia eléctrica",
+      "Mejora la conductancia",
+      "Disminuye su resistencia eléctrica",
+      "La resistencia eléctrica es inmune a los cambios de temperatura"
+    ]
+  },
+  {
+    "question": "En un sistema de radiocomunicación, el llamado “ruido blanco”:",
+    "answers": [
+      "Es incoloro",
+      "Es independiente del color",
+      "Depende únicamente del micrófono y del altavoz",
+      "Es independiente de la frecuencia"
+    ]
+  },
+  {
+    "question": "Un condensador es un dispositivo que almacena:",
+    "answers": [
+      "Energía acústica",
+      "Energía electromagnética",
+      "Carga eléctrica",
+      "No almacena nada"
+    ]
+  },
+  {
+    "question": "Para medir intensidad del campo eléctrico se utilizan unidades de:",
+    "answers": [
+      "dBV",
+      "dBW",
+      "dBV/m",
+      "dBW/ m2"
+    ]
+  },
+  {
+    "question": "Se denomina rendimiento de un transmisor:",
+    "answers": [
+      "La relación entre la potencia entregada y la reflejada",
+      "La capacidad de detectar señales cercanas al nivel de ruido",
+      "La relación entre la potencia entregada al sistema radiante y la consumida",
+      "Al valor correspondiente al 99% de la potencia emitida por el transmisor"
+    ]
+  },
+  {
+    "question": "En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes al objeto de evitar la generación de interferencias?:",
+    "answers": [
+      "Control automático de frecuencia o CAF",
+      "Control automático de ganancia o CAG",
+      "Control automático de nivel o ALC",
+      "Control automático de saturación o CAS"
+    ]
+  },
+  {
+    "question": "En un transformador eléctrico, ¿qué se conoce como “relación de transformación”?:",
+    "answers": [
+      "El tamaño del primario frente al secundario",
+      "La relación entre las espiras mayores y las menores del primario",
+      "La separación entre la entrada y la salida",
+      "La relación entre el número de espiras del primario y el número de espiras del secundario"
+    ]
+  },
+  {
+    "question": "La transferencia máxima de potencia entre dos circuitos se dará cuando:",
+    "answers": [
+      "La antena esté bien despejada",
+      "La antena esté puesta a tierra",
+      "Exista adaptación de las impedancias",
+      "Haya ondas estacionarias"
+    ]
+  },
+  {
+    "question": "La siguiente gráfica de espectro a la salida de un trasmisor corresponde a una señal con modulación de:",
+    "answers": [
+      "Frecuencia",
+      "Amplitud",
+      "Banda lateral única",
+      "Fase por portadora"
+    ]
+  },
+  {
+    "question": "¿Cuál es el tipo de conductor más inmune a las interferencias radiadas?:",
+    "answers": [
+      "Fibra óptica",
+      "Cable coaxial",
+      "Cable paralelo",
+      "Hilo de cobre desnudo"
+    ]
+  },
+  {
+    "question": "¿A qué se suele llamar \"frecuencias imagen\" en un receptor?:",
+    "answers": [
+      "A las frecuencias portadoras de las imágenes",
+      "A las frecuencias dos veces mayor que las intermedias, por encima y por debajo de las frecuencias centrales originales",
+      "A las partes imaginarias de las frecuencias",
+      "A las simetrías de de cada frecuencia"
+    ]
+  },
+  {
+    "question": "En el siguiente diagrama de radiación de una antena, la diferencia en decibelios entre los puntos 1 y 2, se denomina:",
+    "answers": [
+      "Ganancia",
+      "Relación delante-atrás",
+      "Directividad",
+      "Impedancia"
+    ]
+  },
+  {
+    "question": "Las etapas desde la antena hasta el altavoz de un receptor superheterodino son por el siguiente orden:",
+    "answers": [
+      "Mezclador, limitador, detector, amplificador de RF, amplificador de audio",
+      "Amplificador RF, mezclador, amplificador de FI, demodulador, amplificador de audio",
+      "Detector, limitador, amplificador de RF, mezclador, amplificador de audio",
+      "Amplificador de FI, detector, mezclador, amplificador de audio"
+    ]
+  },
+  {
+    "question": "En el siguiente esquema de un receptor, ¿que circuito incluiría en el cuadro con interrogantes al objeto de obtener un nivel de audio constante en el altavoz, independientemente del nivel de señal en antena?:",
+    "answers": [
+      "Control automático de ganancia",
+      "Control automático de estabilidad",
+      "Control automático de frecuencia",
+      "Control automático de audio"
+    ]
+  },
+  {
+    "question": "¿Para qué se ponen \"circuitos de filtrado\" en la salidas de las fuentes de alimentación?:",
+    "answers": [
+      "Para impedir señales espúreas en la entrada de la fuente",
+      "Para protección de los bobinados",
+      "Para reducir el rizado de la señal de salida y obtener un valor más constante de esta",
+      "Para igualar la señal de salida a la de entrada"
+    ]
+  },
+  {
+    "question": "La toma de tierra de una estación:",
+    "answers": [
+      "Debe instalarse si mejora el rendimiento",
+      "Permite atenuar el ruido que se recibe con la señal",
+      "Debe conectarse a cada uno de los chasis metálicos de los equipos",
+      "Debe conectarse siempre a la conducción de agua"
+    ]
+  },
+  {
+    "question": "De las siguientes bandas de frecuencias la más adecuada para comunicaciones por satélite se corresponde con:",
+    "answers": [
+      "HF",
+      "MF",
+      "LF",
+      "VHF"
+    ]
+  },
+  {
+    "question": "Para cualquier comunicación radioeléctrica en la banda UHF, se puede afirmar que:",
+    "answers": [
+      "A mayor frecuencia menor es el alcance conseguido",
+      "A mayor altura de las antenas menor es el alcance conseguido",
+      "A menor frecuencia mayor deberá de ser la altura de las antenas",
+      "A menor alcance mayor será la polarización de la señal"
+    ]
+  },
+  {
+    "question": "En los equipos de radioaficionado, el modo de modulación conocido como NBFM (Narrow Band Frequency Modulation) ¿Qué excursión de frecuencia máxima permite?:",
+    "answers": [
+      "12 kHz",
+      "50 kHz",
+      "150 kHz",
+      "La 1 MHz"
+    ]
+  },
+  {
+    "question": "La lectura “10 dBµV”, es un valor de:",
+    "answers": [
+      "Resistencia eléctrica",
+      "Potencia eléctrica",
+      "Intensidad de corriente eléctrica",
+      "Tensión eléctrica"
+    ]
+  },
+  {
+    "question": "En armónicos producidos por circuitos no lineales:",
+    "answers": [
+      "Solo existen los de segundo orden",
+      "La frecuencia de los de segundo orden es doble de la fundamental",
+      "Los de segundo orden siempre son despreciables",
+      "Los equipos modernos nunca producen armónicos"
+    ]
+  },
+  {
+    "question": "En una emisión de banda lateral única (SSB):",
+    "answers": [
+      "Se tiene una sola banda lateral sin portadora",
+      "Se tiene una única banda lateral más la portadora",
+      "La portadora esta modulada en frecuencia",
+      "La portadora está desfasada 180º respecto a la única banda lateral"
+    ]
+  },
+  {
+    "question": "¿Qué símbolo va asociado a la modulación de frecuencia en fonía?:",
+    "answers": [
+      "PNP",
+      "F3E",
+      "F1F",
+      "AM"
+    ]
+  },
+  {
+    "question": "El esquema de un transmisor básico para banda lateral única se corresponde con la figura:",
+    "answers": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "question": "Las bobinas conectadas en los extremos del dipolo de la figura permiten:",
+    "answers": [
+      "Aumentar la potencia de emisión",
+      "Disminuir la longitud eléctrica de la antena",
+      "Incrementar la longitud eléctrica de antena",
+      "Evitar el uso del balun"
+    ]
+  },
+  {
+    "question": "La etapa de detección de un receptor se emplea para:",
+    "answers": [
+      "Mezclar la señal recibida",
+      "Demodular la señal recibida",
+      "Limitar la señal recibida",
+      "Amplificar la señal recibida"
+    ]
+  },
+  {
+    "question": "¿Qué indica el factor de calidad \"Q\" de un circuito resonante?:",
+    "answers": [
+      "La calidad de los componentes eléctricos",
+      "La facultad para estabilizar un circuito",
+      "Relación entre el ancho de banda de entrada y salida",
+      "Facultad para seleccionar una frecuencia eliminando las demás"
+    ]
+  },
+  {
+    "question": "De menor a mayor altura, indique el orden correcto de las capas de la atmosfera:",
+    "answers": [
+      "Ionosfera – troposfera – estratosfera",
+      "Ionosfera – estratosfera – troposfera",
+      "Estratosfera – ionosfera – troposfera",
+      "Troposfera – estratosfera – ionosfera"
+    ]
+  },
+  {
+    "question": "Un medidor de Relación de Ondas Estacionarias (R.O.E.):",
+    "answers": [
+      "Mide la robustez del equipo",
+      "Mide el rizado de la señal transmitida",
+      "Mide la relación entre la señal incidente en la antena y la reflejada por ésta",
+      "No existe"
+    ]
+  }
+]

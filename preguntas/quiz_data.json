@@ -1,0 +1,302 @@
+[
+  {
+    "question": "Las antenas Yagi:",
+    "answers": [
+      "Son directivas",
+      "Son omnidireccionales",
+      "Solo tienen reflector y dipolo",
+      "Solo tienen dipolo y directores"
+    ],
+    "correct_answer": "Son directivas"
+  },
+  {
+    "question": "Si al emitir en la banda de 2 metros se tiene conocimiento de que se producen interferencias al Servicio Móvil Aeronáutico, deberá:",
+    "answers": [
+      "Emitir con menos potencia",
+      "Seguir emitiendo",
+      "Dejar de emitir",
+      "Comunicárselo al aeropuerto"
+    ],
+    "correct_answer": "Dejar de emitir"
+  },
+  {
+    "question": "La velocidad de propagación de las ondas electromagnéticas siempre es igual a:",
+    "answers": [
+      "La frecuencia dividida por la longitud de onda",
+      "La longitud de onda dividida por la frecuencia",
+      "La longitud de onda multiplicada por la frecuencia",
+      "300.000 Km/seg"
+    ],
+    "correct_answer": "La longitud de onda multiplicada por la frecuencia"
+  },
+  {
+    "question": "Una instalación radioeléctrica con desadaptación de impedancias entre el transmisor y la antena podrá producir:",
+    "answers": [
+      "Interferencias",
+      "Una mayor potencia radiada",
+      "Acoplamiento magnético de alta frecuencia",
+      "Componentes de campo ajustados a impedancia nula"
+    ],
+    "correct_answer": "Interferencias"
+  },
+  {
+    "question": "Un transformador está formado por al menos:",
+    "answers": [
+      "Un circuito resonante serie",
+      "Dos resistencias con propiedades ferromagnéticas",
+      "Bobinas con rectificadores de onda completa",
+      "Dos bobinas acopladas"
+    ],
+    "correct_answer": "Dos bobinas acopladas"
+  },
+  {
+    "question": "¿Qué es un diodo?",
+    "answers": [
+      "Elemento que filtra la corriente eléctrica",
+      "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+      "Componente eléctrico que elimina espurias",
+      "Dispositivo limitador de potencia"
+    ],
+    "correct_answer": "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido"
+  },
+  {
+    "question": "La forma más común de propagación en VHF y UHF es por:",
+    "answers": [
+      "Onda de superficie",
+      "Onda directa",
+      "Onda ionosférica",
+      "Onda reflejada"
+    ],
+    "correct_answer": "Onda directa"
+  },
+  {
+    "question": "Se denomina frecuencia intermedia (FI) a:",
+    "answers": [
+      "La frecuencia empleada en los receptores de conversión directa",
+      "La frecuencia comprendida entre la inferior y la superior de las sintonizadas",
+      "La frecuencia de trabajo del oscilador local",
+      "La frecuencia de valor constante utilizada en los receptores superheterodinos"
+    ],
+    "correct_answer": "La frecuencia de valor constante utilizada en los receptores superheterodinos"
+  },
+  {
+    "question": "El campo eléctrico se expresa en:",
+    "answers": [
+      "V.m",
+      "W/m",
+      "Q/s",
+      "V/m"
+    ],
+    "correct_answer": "V/m"
+  },
+  {
+    "question": "En un receptor, la capacidad de mantener la frecuencia sintonizada se denomina:",
+    "answers": [
+      "Sintonía fina",
+      "Sensibilidad",
+      "Selectividad",
+      "Estabilidad"
+    ],
+    "correct_answer": "Estabilidad"
+  },
+  {
+    "question": "De la batería de un portátil, donde figure la siguiente inscripción “DC 7.4 v - 1500 mAh”, se puede afirmar que podrá proporcionar:",
+    "answers": [
+      "7,4 voltios y 1,5 amperios durante una hora",
+      "1,5 voltios y 7,4 amperios durante una hora",
+      "7,4 voltios y 1500 amperios durante una hora",
+      "7,4 voltios y 1500 amperios durante media hora"
+    ],
+    "correct_answer": "7,4 voltios y 1,5 amperios durante una hora"
+  },
+  {
+    "question": "Un termistor de tipo NTC es:",
+    "answers": [
+      "Un transistor con alto coeficiente de temperatura",
+      "Un diodo rectificador para circuitos de corriente elevada",
+      "Una resistencia cuyo valor se reduce a medida que la temperatura aumenta",
+      "Un divisor de tensión en función de la temperatura externa"
+    ],
+    "correct_answer": "Una resistencia cuyo valor se reduce a medida que la temperatura aumenta"
+  },
+  {
+    "question": "La característica de un filtro denominada como “frecuencia de corte” es:",
+    "answers": [
+      "La frecuencia central del filtro",
+      "El primer armónico de la frecuencia a la que el filtro deja de funcionar",
+      "La frecuencia que delimita la banda de paso o no paso por el filtro",
+      "Un dato irrelevante para el filtro"
+    ],
+    "correct_answer": "La frecuencia que delimita la banda de paso o no paso por el filtro"
+  },
+  {
+    "question": "La región angular comprendida entre las dos líneas gruesas del siguiente diagrama de radiación de una antena, se denomina:",
+    "answers": [
+      "Polarización",
+      "Relación delante-atrás",
+      "Ancho de haz de radiación",
+      "Región de campo radiado"
+    ],
+    "correct_answer": "Ancho de haz de radiación"
+  },
+  {
+    "question": "La anchura de banda necesaria de un transmisor:",
+    "answers": [
+      "Es la máxima anchura de banda permitida al transmisor",
+      "Es la necesaria para lograr transmitir a la máxima distancia",
+      "Es la suficiente para permitir la transmisión a la velocidad y calidad requeridas",
+      "Es aquella que contiene el 99% de la potencia emitida por el transmisor"
+    ],
+    "correct_answer": "Es la suficiente para permitir la transmisión a la velocidad y calidad requeridas"
+  },
+  {
+    "question": "La polarización de una antena es:",
+    "answers": [
+      "La relación entre la impedancia de entrada y la potencia transmitida",
+      "La orientación del campo eléctrico transmitido",
+      "El cociente entre la ganancia y la directividad",
+      "La orientación del campo magnético transmitido"
+    ],
+    "correct_answer": "La orientación del campo eléctrico transmitido"
+  },
+  {
+    "question": "En un transformador eléctrico, ¿qué se conoce como “relación de transformación”?:",
+    "answers": [
+      "El tamaño del primario frente al secundario",
+      "La relación entre las espiras mayores y las menores del primario",
+      "La separación entre la entrada y la salida",
+      "La relación entre el número de espiras del primario y el número de espiras del secundario"
+    ],
+    "correct_answer": "La relación entre el número de espiras del primario y el número de espiras del secundario"
+  },
+  {
+    "question": "Los osciladores a cristal de cuarzo generan una señal:",
+    "answers": [
+      "De frecuencia muy estable",
+      "Variable en función de la impedancia del circuito",
+      "Poco estable no utilizándose en la actualidad",
+      "Modulada en banda lateral única"
+    ],
+    "correct_answer": "De frecuencia muy estable"
+  },
+  {
+    "question": "El “Factor de calidad, Q” de un circuito resonante es:",
+    "answers": [
+      "La relación que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda",
+      "Independiente de la frecuencia",
+      "La relación entre la onda estacionaria y el ancho de banda del circuito",
+      "Inexistente"
+    ],
+    "correct_answer": "La relación que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda"
+  },
+  {
+    "question": "Señale el diagrama de radiación correspondiente a una antena Yagi:",
+    "answers": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "correct_answer": ""
+  },
+  {
+    "question": "El medidor comúnmente denominado “s-meter” indica:",
+    "answers": [
+      "La relación de onda estacionaria",
+      "La estabilidad del receptor",
+      "La intensidad de la señal de entrada del receptor",
+      "El consumo de potencia de alimentación"
+    ],
+    "correct_answer": "La intensidad de la señal de entrada del receptor"
+  },
+  {
+    "question": "El detector de producto se emplea para:",
+    "answers": [
+      "Mezclar con mínima distorsión la señal recibida",
+      "La etapa detectora en los receptores de banda lateral única",
+      "Obtener la frecuencia intermedia en los receptores de FM",
+      "Limitar los niveles de la señal antes de su amplificación"
+    ],
+    "correct_answer": "La etapa detectora en los receptores de banda lateral única"
+  },
+  {
+    "question": "La diferencia de potencial eléctrico se mide en:",
+    "answers": [
+      "Vatios",
+      "Faradios",
+      "Microfaradios",
+      "Voltios"
+    ],
+    "correct_answer": "Voltios"
+  },
+  {
+    "question": "En el siguiente esquema, el transmisor, la línea de alimentación y la antena tienen la misma impedancia a la frecuencia de trabajo, por lo que el vatímetro indicará que:",
+    "answers": [
+      "La potencia reflejada es cero",
+      "La potencia directa es cero",
+      "La potencia reflejada es igual a la potencia directa",
+      "La potencia reflejada es superior a la potencia directa"
+    ],
+    "correct_answer": "La potencia reflejada es cero"
+  },
+  {
+    "question": "De las siguientes bandas de frecuencias la más adecuada para comunicaciones por satélite se corresponde con:",
+    "answers": [
+      "HF",
+      "MF",
+      "LF",
+      "VHF"
+    ],
+    "correct_answer": "VHF"
+  },
+  {
+    "question": "¿Qué valor indicará un medidor de ondas estacionarias, en el caso de un acoplamiento óptimo entre un transmisor y una antena?:",
+    "answers": [
+      "Cero",
+      "Diez",
+      "Dos",
+      "Uno"
+    ],
+    "correct_answer": "Uno"
+  },
+  {
+    "question": "En un circuito con dos resistencias en paralelo, la intensidad total será:",
+    "answers": [
+      "La suma de las caídas de tensión",
+      "La misma que la que circule por la rama con la menor resistencia",
+      "La misma que la que circule por la rama con la mayor resistencia",
+      "La suma de las intensidades de cada una de las ramas"
+    ],
+    "correct_answer": "La suma de las intensidades de cada una de las ramas"
+  },
+  {
+    "question": "¿Qué se entiende por “Procesador Digital de Señal” (DSP)?:",
+    "answers": [
+      "Es un dispositivo para suspensión de periodos",
+      "Es un sistema con Hardware y Software optimizados para aplicaciones que requieran un procesamiento digital de la señal a muy alta velocidad",
+      "Es un ondulador para hacer señales cuadradas",
+      "Es un duplicador de frecuencias digitales"
+    ],
+    "correct_answer": "Es un sistema con Hardware y Software optimizados para aplicaciones que requieran un procesamiento digital de la señal a muy alta velocidad"
+  },
+  {
+    "question": "¿Qué banda de frecuencias presenta mejores condiciones para la propagación por reflexión ionosférica?",
+    "answers": [
+      "HF",
+      "UHF",
+      "SHF",
+      "EHF"
+    ],
+    "correct_answer": "HF"
+  },
+  {
+    "question": "Cuando una instalación de radioaficionado afecta o interfiere a una ICT (Infraestructura Común de Telecomunicaciones):",
+    "answers": [
+      "Se puede seguir emitiendo si se dispone de licencia o autorización de radioaficionado",
+      "Se tiene que dejar de emitir, al menos temporalmente",
+      "Se comunica al presidente de la comunidad",
+      "Se debe apagar la instalación de ICT"
+    ],
+    "correct_answer": "Se tiene que dejar de emitir, al menos temporalmente"
+  }
+]

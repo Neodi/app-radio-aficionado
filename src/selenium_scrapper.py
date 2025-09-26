@@ -7,6 +7,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import json
+import os
+from dotenv import load_dotenv
+
 
 def setup_driver():
     """Configura y devuelve el driver de Chrome."""
@@ -53,19 +56,35 @@ def extract_quiz_data(driver):
         questions = driver.find_elements(By.CLASS_NAME, "quiz-question")
         quiz_data = []
 
-        for question in questions:
+        for i, question in enumerate(questions):
             title_element = question.find_element(By.CLASS_NAME, "quiz-question-title")
             question_title = title_element.text.strip()
 
+            # Extraer todas las respuestas
             answer_labels = question.find_elements(By.CLASS_NAME, "quiz-question-answer-ctrl-lbl")
             answers = [label.text.strip() for label in answer_labels]
 
+            # Hacer clic en la primera opción para revelar la respuesta correcta
+            first_radio = question.find_element(By.CLASS_NAME, "quiz-question-answer-ctrl")
+            driver.execute_script("arguments[0].click();", first_radio)
+            time.sleep(1)  # Esperar a que se procese la respuesta
+
+            # Buscar la respuesta correcta
+            correct_answer = None
+            try:
+                correct_element = question.find_element(By.CLASS_NAME, "quiz-question-answer-correct")
+                correct_label = correct_element.find_element(By.CLASS_NAME, "quiz-question-answer-ctrl-lbl")
+                correct_answer = correct_label.text.strip()
+            except:
+                print(f"No se pudo encontrar la respuesta correcta para la pregunta {i+1}")
+
             question_data = {
                 "question": question_title,
-                "answers": answers
+                "answers": answers,
+                "correct_answer": correct_answer
             }
             quiz_data.append(question_data)
-            print(f"Pregunta extraída: {question_title[:50]}...")
+            print(f"Pregunta extraída: {question_title[:50]}... | Correcta: {correct_answer[:30] if correct_answer else 'No encontrada'}...")
 
         return quiz_data
 
@@ -73,14 +92,14 @@ def extract_quiz_data(driver):
         print(f"Error al extraer las preguntas: {e}")
         return None
 
-def save_quiz_data_to_json(quiz_data, filename="quiz_data.json"):
+def save_quiz_data_to_json(quiz_data, filename="preguntas/quiz_data.json"):
     """Guarda los datos del cuestionario en un archivo JSON."""
     try:
         json_output = json.dumps(quiz_data, indent=2, ensure_ascii=False)
-        print("\n" + "="*50)
-        print("DATOS EXTRAÍDOS EN JSON:")
-        print("="*50)
-        print(json_output)
+        # print("\n" + "="*50)
+        # print("DATOS EXTRAÍDOS EN JSON:")
+        # print("="*50)
+        # print(json_output)
 
         with open(filename, "w", encoding="utf-8") as file:
             json.dump(quiz_data, file, indent=2, ensure_ascii=False)
@@ -91,8 +110,12 @@ def save_quiz_data_to_json(quiz_data, filename="quiz_data.json"):
 
 def main():
     """Función principal para ejecutar el scraping."""
+
+    load_dotenv()
+    URL_BASE = os.getenv("URL_BASE")
+
     driver = setup_driver()
-    driver.get("https://www.ure.es/examenes/electricidad-y-radioelectricidad/")
+    driver.get(URL_BASE)
     time.sleep(2)
 
     deny_cookies(driver)

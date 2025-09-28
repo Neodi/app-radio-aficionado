@@ -1,0 +1,392 @@
+[
+  {
+    "question": "¿Qué se debería encontrar siempre antes de la toma de antena en un emisor?:",
+    "type": "multiple_choice",
+    "options": [
+      "Un interruptor",
+      "El mezclador",
+      "La etapa de potencia",
+      "Un filtro paso bajo o paso banda"
+    ],
+    "correct_answer": 3,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Cuando una instalación de radioaficionado afecta o interfiere a una ICT (Infraestructura Común de Telecomunicaciones):",
+    "type": "multiple_choice",
+    "options": [
+      "Se puede seguir emitiendo si se dispone de licencia o autorización de radioaficionado",
+      "Se tiene que dejar de emitir, al menos temporalmente",
+      "Se comunica al presidente de la comunidad",
+      "Se debe apagar la instalación de ICT"
+    ],
+    "correct_answer": 1,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Si a la entrada de un mezclador se aplican las frecuencias 14 MHz y 4 MHz, indique qué frecuencia dará a la salida:",
+    "type": "multiple_choice",
+    "options": [
+      "14.4 MHz",
+      "1 MHz",
+      "200 MHz",
+      "10 MHz"
+    ],
+    "correct_answer": 3,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Un medidor de Relación de Ondas Estacionarias (R.O.E.):",
+    "type": "multiple_choice",
+    "options": [
+      "Mide la robustez del equipo",
+      "Mide el rizado de la señal transmitida",
+      "Mide la relación entre la señal incidente en la antena y la reflejada por ésta",
+      "No existe"
+    ],
+    "correct_answer": 2,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Un termistor NTC es:",
+    "type": "multiple_choice",
+    "options": [
+      "Una resistencia cuyo valor se reduce a medida que la temperatura aumenta",
+      "Una resistencia cuyo valor aumenta a medida que la temperatura aumenta",
+      "Una resistencia cuyo valor se mantiene constante a medida que la temperatura aumenta",
+      "Una resistencia cuyo valor se mantiene constante a medida que la temperatura disminuye"
+    ],
+    "correct_answer": 0,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "El margen dinámico de un receptor queda determinado fundamentalmente en:",
+    "type": "multiple_choice",
+    "options": [
+      "El primer mezclador de entrada",
+      "El oscilador local",
+      "El demodulador",
+      "El amplificador de audiofrecuencia"
+    ],
+    "correct_answer": 0,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Se conoce como \"selectividad\" de un receptor:",
+    "type": "multiple_choice",
+    "options": [
+      "El grado de selección efectuado en la fabricación",
+      "El número de bandas de frecuencia que puede seleccionar",
+      "La capacidad que tiene para separar dos señales de frecuencias próximas",
+      "La diferencia que existe entre la señal sintonizada y el ruido"
+    ],
+    "correct_answer": 2,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Un dipolo de media onda, para la banda de 40 metros, debe tener una longitud aproximada de:",
+    "type": "multiple_choice",
+    "options": [
+      "10 m",
+      "20 m",
+      "40 m",
+      "80 m"
+    ],
+    "correct_answer": 1,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Se conoce como \"frecuencia de corte\" de una guía de onda a:",
+    "type": "multiple_choice",
+    "options": [
+      "La frecuencia por debajo de la cual no es posible la transmisión en la guía de onda",
+      "La frecuencia máxima de la transmisión",
+      "La frecuencia intermedia",
+      "La frecuencia con la que debe cortarse la guía para la transmisión"
+    ],
+    "correct_answer": 0,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "¿Hay alguna limitación para las radiaciones espurias en el servicio de radioaficionados, en la banda HF?:",
+    "type": "multiple_choice",
+    "options": [
+      "No hay limitaciones",
+      "Sí, 40 dB por debajo de la potencia media, dentro de la anchura de banda necesaria y no superar el valor de 50 mW",
+      "Sí, menor que 30 dBm",
+      "Sólo cuando hay interferencias"
+    ],
+    "correct_answer": 1,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Si se reduce la sección de un conductor:",
+    "type": "multiple_choice",
+    "options": [
+      "La resistencia eléctrica aumenta",
+      "La resistencia eléctrica disminuye",
+      "Disminuye la temperatura del conductor",
+      "Aumenta el número de átomos por centímetro cuadrado"
+    ],
+    "correct_answer": 0,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Decimos que hay sobremodulación, cuando:",
+    "type": "multiple_choice",
+    "options": [
+      "Se emiten 2 portadoras",
+      "El volumen está al máximo",
+      "El índice de modulación es inferior a 100%",
+      "El índice modulación es superior al 100%"
+    ],
+    "correct_answer": 3,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "El esquema de un transmisor básico para banda lateral única se corresponde con la figura:",
+    "type": "multiple_choice",
+    "options": [
+      "Opción 1",
+      "Opción 2",
+      "Opción 3",
+      "Opción 4"
+    ],
+    "correct_answer": 1,
+    "image": null,
+    "has_image_options": true
+  },
+  {
+    "question": "En que bandas de frecuencia predomina el modo de propagación por onda ionosférica:",
+    "type": "multiple_choice",
+    "options": [
+      "VHF",
+      "HF",
+      "UHF",
+      "LF"
+    ],
+    "correct_answer": 1,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "En una antena directiva tipo Yagui los elementos parásitos:",
+    "type": "multiple_choice",
+    "options": [
+      "Se conectan al cable de alimentación",
+      "Necesitan un balun para su adaptación",
+      "Proporcionan directividad",
+      "Permiten aumentar el ancho de banda de emisión"
+    ],
+    "correct_answer": 2,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Si en el siguiente esquema el conjunto L-C resuena a la frecuencia del transmisor, se puede afirmar que la potencia medida por el vatímetro será:",
+    "type": "multiple_choice",
+    "options": [
+      "Igual a la del transmisor",
+      "La mitad de la disipada en el circuito L-C",
+      "Mínima",
+      "El doble de la disipada en el circuito L-C"
+    ],
+    "correct_answer": 2,
+    "image": "pregunta_439.png",
+    "has_image_options": false
+  },
+  {
+    "question": "En una transmisión radioeléctrica, ¿se atenúan las ondas por la propagación?:",
+    "type": "multiple_choice",
+    "options": [
+      "No, nunca",
+      "A veces",
+      "Sí, siempre",
+      "Sólo se atenúan si hay lluvia"
+    ],
+    "correct_answer": 2,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "¿Cuál es el tipo de conductor más inmune a las interferencias radiadas?:",
+    "type": "multiple_choice",
+    "options": [
+      "Fibra óptica",
+      "Cable coaxial",
+      "Cable paralelo",
+      "Hilo de cobre desnudo"
+    ],
+    "correct_answer": 0,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "La ley de Coulomb dice que la fuerza entre dos cargas eléctricas es:",
+    "type": "multiple_choice",
+    "options": [
+      "Directamente proporcional a la distancia de separación",
+      "Directamente proporcional al cuadrado de la distancia de separación",
+      "Inversamente proporcional a las cargas",
+      "Directamente proporcional al producto de las cargas"
+    ],
+    "correct_answer": 3,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "La diferencia de potencial eléctrico se mide en:",
+    "type": "multiple_choice",
+    "options": [
+      "Vatios",
+      "Faradios",
+      "Microfaradios",
+      "Voltios"
+    ],
+    "correct_answer": 3,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "¿A qué se suele llamar \"frecuencias imagen\" en un receptor?:",
+    "type": "multiple_choice",
+    "options": [
+      "A las frecuencias portadoras de las imágenes",
+      "A las frecuencias dos veces mayor que las intermedias, por encima y por debajo de las frecuencias centrales originales",
+      "A las partes imaginarias de las frecuencias",
+      "A las simetrías de de cada frecuencia"
+    ],
+    "correct_answer": 1,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Cuando se produce una interferencia perjudicial que afecta a la seguridad de la vida humana:",
+    "type": "multiple_choice",
+    "options": [
+      "Se debe bajar el volumen",
+      "Se debe llamar a la Jefatura Provincial correspondiente solicitando ayuda",
+      "Se debe dejar de emitir hasta resolver el problema",
+      "Se debe emitir con menor potencia"
+    ],
+    "correct_answer": 2,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "En el siguiente esquema eléctrico el diodo está actuando como:",
+    "type": "multiple_choice",
+    "options": [
+      "Amplificador de tensión",
+      "Detector de envolvente",
+      "Filtro paso banda",
+      "Rectificador de onda completa"
+    ],
+    "correct_answer": 1,
+    "image": "pregunta_422.png",
+    "has_image_options": false
+  },
+  {
+    "question": "Las emisiones situadas fuera de la banda necesaria están constituidas por:",
+    "type": "multiple_choice",
+    "options": [
+      "La frecuencia imagen más los armónicos",
+      "El conjunto de emisiones no esenciales y las emisiones fuera de banda",
+      "El nivel de campo mínimo utilizable",
+      "Las emisiones parásitas"
+    ],
+    "correct_answer": 1,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "La velocidad de propagación de las ondas electromagnéticas siempre es igual a:",
+    "type": "multiple_choice",
+    "options": [
+      "La frecuencia dividida por la longitud de onda",
+      "La longitud de onda dividida por la frecuencia",
+      "La longitud de onda multiplicada por la frecuencia",
+      "300.000 Km/seg"
+    ],
+    "correct_answer": 2,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Señale la configuración de conexión de equipos correcta:",
+    "type": "multiple_choice",
+    "options": [
+      "Opción 1",
+      "Opción 2",
+      "Opción 3",
+      "Opción 4"
+    ],
+    "correct_answer": 2,
+    "image": null,
+    "has_image_options": true
+  },
+  {
+    "question": "En los modernos transceptores el uso de procesadores digitales de señal (DSP) permite entre otras cosas:",
+    "type": "multiple_choice",
+    "options": [
+      "Duplicar la potencia de emisión",
+      "Optimizar los filtros del transceptor",
+      "Disminuir la potencia reflejada en la línea de transmisión",
+      "Incrementar el tiempo de transmisión sin calentamiento del equipo"
+    ],
+    "correct_answer": 1,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "Los transistores bipolares son dispositivos que:",
+    "type": "multiple_choice",
+    "options": [
+      "Son elementos pasivos",
+      "Siempre dan más potencia que las válvulas",
+      "Tienen tres terminales",
+      "Disponen de rejilla"
+    ],
+    "correct_answer": 2,
+    "image": null,
+    "has_image_options": false
+  },
+  {
+    "question": "El siguiente diagrama de radiación corresponde a una antena tipo:",
+    "type": "multiple_choice",
+    "options": [
+      "Omnidireccional",
+      "Dipolo",
+      "Directiva",
+      "Isotrópica"
+    ],
+    "correct_answer": 2,
+    "image": "pregunta_140.png",
+    "has_image_options": false
+  },
+  {
+    "question": "Las bandas de colores en un condensador indican:",
+    "type": "multiple_choice",
+    "options": [
+      "Los materiales de los que está hecho",
+      "Su precio",
+      "Su garantía",
+      "Su capacidad, su tolerancia y su tensión máxima de trabajo"
+    ],
+    "correct_answer": 3,
+    "image": null,
+    "has_image_options": false
+  }
+]

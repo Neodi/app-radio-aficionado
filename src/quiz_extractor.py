@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from image_downloader import download_question_image, download_option_images
+from domain.quizQuestionModel import QuizQuestion, Title, Option
 
 
 def extract_question_title(question):
@@ -75,7 +76,7 @@ def trigger_answer_reveal(question, driver):
 
 
 def extract_single_question_data(question, question_index, driver):
-    """Extrae los datos de una sola pregunta."""
+    """Extrae los datos de una sola pregunta y retorna un objeto QuizQuestion."""
     # Obtener información básica
     question_id = question.get_attribute("data-question-id")
     question_title = extract_question_title(question)
@@ -100,23 +101,51 @@ def extract_single_question_data(question, question_index, driver):
     else:
         correct_answer, correct_index = find_correct_answer_text(question, answers)
     
-    # Crear el objeto de datos de la pregunta
-    question_data = {
-        "question": question_title,
-        "answers": answers,
-        "correct_answer": correct_answer,
-        "correct_index": correct_index,
-        "image": question_image,
-        "is_image_question": is_img_question,
-        "answer_images": answer_images
-    }
+    # Crear el título usando el modelo Pydantic
+    title = Title(text=question_title, image=question_image)
     
-    # Log de progreso
-    question_type = 'Imágenes' if is_img_question else 'Texto'
-    correct_preview = correct_answer[:30] if correct_answer else 'No encontrada'
-    print(f"Pregunta {question_index + 1}: {question_title[:50]}... | Correcta: {correct_preview}... | Tipo: {question_type}")
+    # Crear las opciones usando el modelo Pydantic
+    options = []
+    for i, answer in enumerate(answers):
+        option_image = None
+        if is_img_question and answer_images and i < len(answer_images):
+            option_image = answer_images[i]
+        
+        options.append(Option(text=answer, image=option_image))
     
-    return question_data
+    # Asegurar que tenemos un índice válido
+    if correct_index is None or correct_index < 0 or correct_index >= len(options):
+        print(f"⚠️ Advertencia: Índice de respuesta correcta inválido para pregunta {question_index + 1}")
+        correct_index = 0  # Fallback al primer índice
+    
+    # Crear el objeto QuizQuestion usando Pydantic
+    try:
+        quiz_question = QuizQuestion(
+            original_id=question_id,
+            title=title,
+            options=options,
+            correct_option=correct_index,
+            is_image_question=is_img_question
+        )
+        
+        # Log de progreso
+        question_type = 'Imágenes' if is_img_question else 'Texto'
+        correct_preview = correct_answer[:30] if correct_answer else 'No encontrada'
+        print(f"Pregunta {question_index + 1}: {question_title[:50]}... | Correcta: {correct_preview}... | Tipo: {question_type}")
+        
+        return quiz_question
+        
+    except Exception as e:
+        print(f"❌ Error creando objeto QuizQuestion para pregunta {question_index + 1}: {e}")
+        # Fallback: crear un objeto mínimo válido
+        fallback_options = [Option(text=f"Opción {i+1}", image=None) for i in range(max(2, len(answers)))]
+        return QuizQuestion(
+            original_id=question_id or f"fallback_{question_index}",
+            title=Title(text=question_title or "Pregunta sin título", image=question_image),
+            options=fallback_options,
+            correct_option=0,
+            is_image_question=is_img_question
+        )
 
 
 def extract_quiz_data(driver):

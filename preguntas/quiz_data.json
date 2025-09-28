@@ -1,422 +1,842 @@
 [
   {
-    "question": "En un receptor, la capacidad de mantener la frecuencia sintonizada se denomina:",
-    "answers": [
-      "Sintonía fina",
-      "Sensibilidad",
-      "Selectividad",
-      "Estabilidad"
+    "id": "0c774894-df71-43f0-b3bf-e8d34dade6a9",
+    "original_id": "319",
+    "title": {
+      "text": "Decimos que hay sobremodulación, cuando:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Se emiten 2 portadoras",
+        "image": null
+      },
+      {
+        "text": "El volumen está al máximo",
+        "image": null
+      },
+      {
+        "text": "El índice de modulación es inferior a 100%",
+        "image": null
+      },
+      {
+        "text": "El índice modulación es superior al 100%",
+        "image": null
+      }
     ],
-    "correct_answer": "Estabilidad",
-    "correct_index": 3,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 3,
+    "is_image_question": false
   },
   {
-    "question": "La lectura “10 dBµV”, es un valor de:",
-    "answers": [
-      "Resistencia eléctrica",
-      "Potencia eléctrica",
-      "Intensidad de corriente eléctrica",
-      "Tensión eléctrica"
+    "id": "526fc04b-70cb-4172-b0f3-3feec1236d9c",
+    "original_id": "379",
+    "title": {
+      "text": "Si en el vatímetro de la figura conectado entre un transmisor y una antena, se observa la siguiente lectura de potencia directa y reflejada, se puede afirmar que:",
+      "image": "pregunta_379.png"
+    },
+    "options": [
+      {
+        "text": "El transmisor está adaptado a la antena",
+        "image": null
+      },
+      {
+        "text": "El transmisor no está adaptado a la antena",
+        "image": null
+      },
+      {
+        "text": "No existe onda estacionaria en la línea",
+        "image": null
+      },
+      {
+        "text": "El valor de la R.O.E. es 1",
+        "image": null
+      }
     ],
-    "correct_answer": "Tensión eléctrica",
-    "correct_index": 3,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 1,
+    "is_image_question": false
   },
   {
-    "question": "La emisión de señales armónicas y espurias:",
-    "answers": [
-      "Disminuye la posible producción de interferencias",
-      "Es necesaria en las bandas de HF",
-      "Implica la posible producción de interferencias",
-      "Solo hay que tenerlo en cuenta en las bandas de VHF y superiores"
+    "id": "c2dbd67a-1508-4341-b71d-ebd52bc6afc3",
+    "original_id": "476",
+    "title": {
+      "text": "Cuando una instalación de radioaficionado afecta o interfiere a una ICT (Infraestructura Común de Telecomunicaciones):",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Se puede seguir emitiendo si se dispone de licencia o autorización de radioaficionado",
+        "image": null
+      },
+      {
+        "text": "Se tiene que dejar de emitir, al menos temporalmente",
+        "image": null
+      },
+      {
+        "text": "Se comunica al presidente de la comunidad",
+        "image": null
+      },
+      {
+        "text": "Se debe apagar la instalación de ICT",
+        "image": null
+      }
     ],
-    "correct_answer": "Implica la posible producción de interferencias",
-    "correct_index": 2,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 1,
+    "is_image_question": false
   },
   {
-    "question": "Para medir la potencia disipada en la resistencia del circuito de la figura, se deben seleccionar:",
-    "answers": [
-      "Los conmutadores en la posición 1",
-      "Los conmutadores en la posición 2",
-      "Los conmutadores en la posición 1 ó 2, las dos posiciones son válidas",
-      "Ninguna de las anteriores ya que la potencia sólo se puede medir con un vatímetro"
+    "id": "44420c98-49a8-42d5-b19d-28c74b85663a",
+    "original_id": "440",
+    "title": {
+      "text": "Los transistores bipolares son dispositivos que:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Son elementos pasivos",
+        "image": null
+      },
+      {
+        "text": "Siempre dan más potencia que las válvulas",
+        "image": null
+      },
+      {
+        "text": "Tienen tres terminales",
+        "image": null
+      },
+      {
+        "text": "Disponen de rejilla",
+        "image": null
+      }
     ],
-    "correct_answer": "Los conmutadores en la posición 1",
-    "correct_index": 0,
-    "image": "pregunta_499.png",
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 2,
+    "is_image_question": false
   },
   {
-    "question": "¿Cuál de las siguientes afirmaciones es cierta?",
-    "answers": [
-      "Un voltio se mide en ciclos por segundo",
-      "Un voltio es la diferencia de potencial que se origina entre los extremos de una resistencia de un ohmio al circular por ella una intensidad de corriente de un amperio",
-      "Un voltio es una unidad de intensidad de campo eléctrico",
-      "Un voltio no se puede medir nunca"
+    "id": "9fe2aa54-f30b-4d92-8c60-efcb26e5a7a2",
+    "original_id": "385",
+    "title": {
+      "text": "Un termistor PTC es aquel que:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Su resistencia está en función de la corriente que la atraviesa",
+        "image": null
+      },
+      {
+        "text": "Su valor aumenta con la temperatura",
+        "image": null
+      },
+      {
+        "text": "Se usa como estabilizadora de corriente",
+        "image": null
+      },
+      {
+        "text": "Su valor disminuye al aumentar la temperatura",
+        "image": null
+      }
     ],
-    "correct_answer": "Un voltio es la diferencia de potencial que se origina entre los extremos de una resistencia de un ohmio al circular por ella una intensidad de corriente de un amperio",
-    "correct_index": 1,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 1,
+    "is_image_question": false
   },
   {
-    "question": "El mando NB de un transceptor sirve para:",
-    "answers": [
-      "Seleccionar las señales moduladas en AM",
-      "Suprimir ruidos impulsivos",
-      "Suprimir ruidos de emisoras no deseadas",
-      "Anula la salida del receptor cuando se recibe una señal con ruido muy alto"
+    "id": "a575878c-885f-4ec0-a659-66eeee1499f7",
+    "original_id": "375",
+    "title": {
+      "text": "La región angular comprendida entre las dos líneas gruesas del siguiente diagrama de radiación de una antena, se denomina:",
+      "image": "pregunta_375.png"
+    },
+    "options": [
+      {
+        "text": "Polarización",
+        "image": null
+      },
+      {
+        "text": "Relación delante-atrás",
+        "image": null
+      },
+      {
+        "text": "Ancho de haz de radiación",
+        "image": null
+      },
+      {
+        "text": "Región de campo radiado",
+        "image": null
+      }
     ],
-    "correct_answer": "Suprimir ruidos impulsivos",
-    "correct_index": 1,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 2,
+    "is_image_question": false
   },
   {
-    "question": "Si a la entrada de un mezclador se aplican las frecuencias 14 MHz y 4 MHz, indique qué frecuencia dará a la salida:",
-    "answers": [
-      "14.4 MHz",
-      "1 MHz",
-      "200 MHz",
-      "10 MHz"
+    "id": "ac3c1bc3-c38c-40f1-bad8-b0dcedc966e6",
+    "original_id": "199",
+    "title": {
+      "text": "Los armónicos son:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Batidos de frecuencias indeseadas",
+        "image": null
+      },
+      {
+        "text": "Múltiplos de la frecuencia fundamental",
+        "image": null
+      },
+      {
+        "text": "Interferencia indeseadas",
+        "image": null
+      },
+      {
+        "text": "La energía de radiofrecuencia que retorna por el cable de bajada",
+        "image": null
+      }
     ],
-    "correct_answer": "10 MHz",
-    "correct_index": 3,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 1,
+    "is_image_question": false
   },
   {
-    "question": "A la frecuencia de resonancia las reactancias inductiva y capacitiva de un circuito se igualan, el cuadrado de esta frecuencia es:",
-    "answers": [
-      "Directamente proporcional a la inductancia de la bobina",
-      "Directamente proporcional a la capacidad del condensador",
-      "Inversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador",
-      "Cero"
+    "id": "822be963-44c0-418a-b2b4-65b00c9da0a7",
+    "original_id": "370",
+    "title": {
+      "text": "¿Qué clase de amplificador reproduce la señal de entrada con la mínima distorsión?:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Clase B",
+        "image": null
+      },
+      {
+        "text": "Clase A",
+        "image": null
+      },
+      {
+        "text": "Clase C",
+        "image": null
+      },
+      {
+        "text": "La distorsión es independiente de la clase de amplificador",
+        "image": null
+      }
     ],
-    "correct_answer": "Inversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador",
-    "correct_index": 2,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 1,
+    "is_image_question": false
   },
   {
-    "question": "La anchura de banda necesaria de un transmisor:",
-    "answers": [
-      "Es la máxima anchura de banda permitida al transmisor",
-      "Es la necesaria para lograr transmitir a la máxima distancia",
-      "Es la suficiente para permitir la transmisión a la velocidad y calidad requeridas",
-      "Es aquella que contiene el 99% de la potencia emitida por el transmisor"
+    "id": "bcea4aad-b1c5-4d1a-8204-0bdc2e2a16b1",
+    "original_id": "14",
+    "title": {
+      "text": "La capacidad de un condensador depende:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "De la tensión en sus extremos y de la corriente que lo atraviesa",
+        "image": null
+      },
+      {
+        "text": "De la geometría y disposición de sus placas además de la naturaleza del dieléctrico",
+        "image": null
+      },
+      {
+        "text": "Del material dieléctrico de los conductores que forman las placas",
+        "image": null
+      },
+      {
+        "text": "De la potencia que disipa en corriente continúa",
+        "image": null
+      }
     ],
-    "correct_answer": "Es la suficiente para permitir la transmisión a la velocidad y calidad requeridas",
-    "correct_index": 2,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 1,
+    "is_image_question": false
   },
   {
-    "question": "La velocidad de propagación de las ondas electromagnéticas en el vacio es de:",
-    "answers": [
-      "300.000 km/s",
-      "300.000 km/h",
-      "300.000 m/s",
-      "300.000 m/h"
+    "id": "a8935127-6bd2-459d-b643-fefe8b8fd2f1",
+    "original_id": "434",
+    "title": {
+      "text": "Qué falta en el siguiente diagrama de bloques para que actúe como un receptor de FM:",
+      "image": "pregunta_434.png"
+    },
+    "options": [
+      {
+        "text": "Nada",
+        "image": null
+      },
+      {
+        "text": "Un ondulador",
+        "image": null
+      },
+      {
+        "text": "Un oscilador",
+        "image": null
+      },
+      {
+        "text": "Un detector de envolvente",
+        "image": null
+      }
     ],
-    "correct_answer": "300.000 km/s",
-    "correct_index": 0,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 2,
+    "is_image_question": false
   },
   {
-    "question": "Los armónicos son:",
-    "answers": [
-      "Batidos de frecuencias indeseadas",
-      "Múltiplos de la frecuencia fundamental",
-      "Interferencia indeseadas",
-      "La energía de radiofrecuencia que retorna por el cable de bajada"
+    "id": "18add6db-9e95-4e70-bfeb-cbd156d868d3",
+    "original_id": "261",
+    "title": {
+      "text": "¿Qué se debería encontrar siempre antes de la toma de antena en un emisor?:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Un interruptor",
+        "image": null
+      },
+      {
+        "text": "El mezclador",
+        "image": null
+      },
+      {
+        "text": "La etapa de potencia",
+        "image": null
+      },
+      {
+        "text": "Un filtro paso bajo o paso banda",
+        "image": null
+      }
     ],
-    "correct_answer": "Múltiplos de la frecuencia fundamental",
-    "correct_index": 1,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 3,
+    "is_image_question": false
   },
   {
-    "question": "Indique cual de las siguientes respuestas es falsa:",
-    "answers": [
-      "Un amplificador es lineal cuando la señal de salida es fiel reflejo de la entrada, pero amplificada",
-      "Los amplificadores pueden ser clase A, B o C",
-      "La carga de un amplificador de potencia debe ser del valor especificado por el fabricante",
-      "La salida de un amplificador de potencia nunca va seguida de filtros destinados a eliminar los armónicos"
+    "id": "45427d0c-6e2c-40d2-9b0f-df203e32ce6c",
+    "original_id": "254",
+    "title": {
+      "text": "La lectura “10 dBµV”, es un valor de:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Resistencia eléctrica",
+        "image": null
+      },
+      {
+        "text": "Potencia eléctrica",
+        "image": null
+      },
+      {
+        "text": "Intensidad de corriente eléctrica",
+        "image": null
+      },
+      {
+        "text": "Tensión eléctrica",
+        "image": null
+      }
     ],
-    "correct_answer": "La salida de un amplificador de potencia nunca va seguida de filtros destinados a eliminar los armónicos",
-    "correct_index": 3,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 3,
+    "is_image_question": false
   },
   {
-    "question": "Si se desea medir la frecuencia de un transmisor no se puede emplear:",
-    "answers": [
-      "Un osciloscopio",
-      "Un voltímetro de radiofrecuencia",
-      "Un analizador del espectro radioeléctrico",
-      "Un frecuencímetro"
+    "id": "3916591b-97e7-4495-b62a-cd11f74f954c",
+    "original_id": "313",
+    "title": {
+      "text": "La relación señal/ruido en un receptor:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Es siempre igual a uno",
+        "image": null
+      },
+      {
+        "text": "Es una característica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB)",
+        "image": null
+      },
+      {
+        "text": "No tiene sentido. En los receptores de alta calidad no hay ruido",
+        "image": null
+      },
+      {
+        "text": "Depende de la potencia del equipo y se expresa en dBm",
+        "image": null
+      }
     ],
-    "correct_answer": "Un voltímetro de radiofrecuencia",
-    "correct_index": 1,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 1,
+    "is_image_question": false
   },
   {
-    "question": "El ancho de banda ocupado es:",
-    "answers": [
-      "El comprendido entre los límites superior e inferior de la señal modulada",
-      "El ancho del canal en uso, más los adyacentes",
-      "El número de vatios necesarios para mantener una buena comunicación",
-      "El número de kilohercios que ocupa la banda de trabajo del equipo"
+    "id": "9c21d6b7-c3d4-47f4-873e-368a70f99359",
+    "original_id": "421",
+    "title": {
+      "text": "El factor de calidad “Q” de un circuito resonante es:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "La relación que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda",
+        "image": null
+      },
+      {
+        "text": "Independiente de la frecuencia",
+        "image": null
+      },
+      {
+        "text": "El valor de la carga del circuito",
+        "image": null
+      },
+      {
+        "text": "Inexistente",
+        "image": null
+      }
     ],
-    "correct_answer": "El comprendido entre los límites superior e inferior de la señal modulada",
-    "correct_index": 0,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 0,
+    "is_image_question": false
   },
   {
-    "question": "Un termistor PTC es aquel que:",
-    "answers": [
-      "Su resistencia está en función de la corriente que la atraviesa",
-      "Su valor aumenta con la temperatura",
-      "Se usa como estabilizadora de corriente",
-      "Su valor disminuye al aumentar la temperatura"
+    "id": "b3e1b4c1-b9db-488b-85ad-cb2b46f3904f",
+    "original_id": "305",
+    "title": {
+      "text": "El valor de la tolerancia de una resistencia viene indicada por la:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Primera línea de color",
+        "image": null
+      },
+      {
+        "text": "Segunda línea de color",
+        "image": null
+      },
+      {
+        "text": "Tercera línea de color",
+        "image": null
+      },
+      {
+        "text": "Cuarta línea de color",
+        "image": null
+      }
     ],
-    "correct_answer": "Su valor aumenta con la temperatura",
-    "correct_index": 1,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 3,
+    "is_image_question": false
   },
   {
-    "question": "En un receptor se denomina selectividad a:",
-    "answers": [
-      "La mínima señal que puede recibir",
-      "La capacidad de separar dos señales muy próximas en frecuencia",
-      "El nivel de la señal del canal adyacente",
-      "La capacidad de rechazar frecuencias superiores a la frecuencia intermedia"
+    "id": "93747d3f-76aa-4374-9e43-d42b0684c72d",
+    "original_id": "147",
+    "title": {
+      "text": "Las radiaciones espurias de los transmisores:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Son aquellas que no molestan a otros receptores",
+        "image": null
+      },
+      {
+        "text": "Se anularán cuando la frecuencia de trabajo sea inferior a 30 MHz",
+        "image": null
+      },
+      {
+        "text": "Deben estar 40 dB por debajo de la frecuencia fundamental",
+        "image": null
+      },
+      {
+        "text": "Para frecuencias inferiores a 30 MHz se atenuaran al menos 40 dB",
+        "image": null
+      }
     ],
-    "correct_answer": "La capacidad de separar dos señales muy próximas en frecuencia",
-    "correct_index": 1,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 3,
+    "is_image_question": false
   },
   {
-    "question": "Para un acoplamiento óptimo entre transmisor y antena, la línea de transmisión debe tener una impedancia:",
-    "answers": [
-      "Menor a la de la antena",
-      "Comprendida entre la de la antena y la del transmisor",
-      "Inferior a la del transmisor",
-      "Igual a la de la antena y a la del transmisor"
+    "id": "50509e7d-e2a2-46ef-8a23-92832c6e0b14",
+    "original_id": "371",
+    "title": {
+      "text": "La variación momentánea de la intensidad de campo recibida se conoce como:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Desvanecimiento o Fading",
+        "image": null
+      },
+      {
+        "text": "Dispersión troposférica",
+        "image": null
+      },
+      {
+        "text": "Dispersión meteórica",
+        "image": null
+      },
+      {
+        "text": "Atenuación de espacio libre",
+        "image": null
+      }
     ],
-    "correct_answer": "Igual a la de la antena y a la del transmisor",
-    "correct_index": 3,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 0,
+    "is_image_question": false
   },
   {
-    "question": "¿Qué se entiende por \"amplitud\" de una señal sinusoidal?:",
-    "answers": [
-      "Es la diferencia entre el valor máximo y el valor medio de la señal",
-      "Es la diferencia entre el valor máximo y el mínimo de la sinusoide",
-      "Es el valor de la frecuencia de la señal",
-      "Es el valor indicativo de la diferencia de fase de la sinusoide"
+    "id": "6090e39c-0b73-4c64-8f43-56094ee47c25",
+    "original_id": "369",
+    "title": {
+      "text": "La característica de un receptor conocida como CAG significa",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Control Automático de Ganancia",
+        "image": null
+      },
+      {
+        "text": "Centro Automático de Gestión",
+        "image": null
+      },
+      {
+        "text": "Control Automático de Gálibo",
+        "image": null
+      },
+      {
+        "text": "Certificado de Alta Garantía",
+        "image": null
+      }
     ],
-    "correct_answer": "Es la diferencia entre el valor máximo y el valor medio de la señal",
-    "correct_index": 0,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 0,
+    "is_image_question": false
   },
   {
-    "question": "Para tratar de minimizar la producción de interferencias con una estación de radioaficionado, debe procurarse:",
-    "answers": [
-      "Radiar con potencia elevada",
-      "Tener una ROE alta",
-      "Tener una ROE baja",
-      "Tener un sintonizador muy fino"
+    "id": "b5d7872c-3fc6-4c74-944f-84f357410ab8",
+    "original_id": "365",
+    "title": {
+      "text": "Los osciladores a cristal de cuarzo generan una señal:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "De frecuencia muy estable",
+        "image": null
+      },
+      {
+        "text": "Variable en función de la impedancia del circuito",
+        "image": null
+      },
+      {
+        "text": "Poco estable no utilizándose en la actualidad",
+        "image": null
+      },
+      {
+        "text": "Modulada en banda lateral única",
+        "image": null
+      }
     ],
-    "correct_answer": "Tener una ROE baja",
-    "correct_index": 2,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 0,
+    "is_image_question": false
   },
   {
-    "question": "La toma de tierra de una estación:",
-    "answers": [
-      "Debe instalarse si mejora el rendimiento",
-      "Permite atenuar el ruido que se recibe con la señal",
-      "Debe conectarse a cada uno de los chasis metálicos de los equipos",
-      "Debe conectarse siempre a la conducción de agua"
+    "id": "523ee9ca-5d72-46ab-a652-e8809b079998",
+    "original_id": "127",
+    "title": {
+      "text": "¿Qué potencia se disipará en una resistencia de 30 ohmios por la que circula una corriente eléctrica de 2 amperios?",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "30 vatios",
+        "image": null
+      },
+      {
+        "text": "60 vatios",
+        "image": null
+      },
+      {
+        "text": "120 vatios",
+        "image": null
+      },
+      {
+        "text": "15 vatios",
+        "image": null
+      }
     ],
-    "correct_answer": "Debe conectarse a cada uno de los chasis metálicos de los equipos",
-    "correct_index": 2,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 2,
+    "is_image_question": false
   },
   {
-    "question": "Las componentes espectrales de una determinada emisión se ven con:",
-    "answers": [
-      "Un ondulador",
-      "Un osciloscopio",
-      "Un analizador de espectro",
-      "Un voltímetro"
+    "id": "438ed1dc-6490-45b3-bbc5-5855a90500c9",
+    "original_id": "312",
+    "title": {
+      "text": "En el siguiente esquema de un receptor, ¿qué circuito incluiría en el cuadro con interrogantes al objeto de rechazar la frecuencia imagen?:",
+      "image": "pregunta_312.png"
+    },
+    "options": [
+      {
+        "text": "Un discriminador de imagen",
+        "image": null
+      },
+      {
+        "text": "Un detector de video",
+        "image": null
+      },
+      {
+        "text": "Un amplificador de banda ancha",
+        "image": null
+      },
+      {
+        "text": "Un filtro",
+        "image": null
+      }
     ],
-    "correct_answer": "Un analizador de espectro",
-    "correct_index": 2,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 3,
+    "is_image_question": false
   },
   {
-    "question": "La siguiente gráfica de espectro a la salida de un trasmisor corresponde a una señal con modulación de:",
-    "answers": [
-      "Frecuencia",
-      "Amplitud",
-      "Banda lateral única",
-      "Fase por portadora"
+    "id": "53a9e54a-e601-4163-8f29-9c93fbab9969",
+    "original_id": "378",
+    "title": {
+      "text": "En que bandas de frecuencia predomina el modo de propagación por onda de superficie:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "VHF",
+        "image": null
+      },
+      {
+        "text": "UHF",
+        "image": null
+      },
+      {
+        "text": "MF",
+        "image": null
+      },
+      {
+        "text": "HF",
+        "image": null
+      }
     ],
-    "correct_answer": "Amplitud",
-    "correct_index": 1,
-    "image": "pregunta_129.png",
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 2,
+    "is_image_question": false
   },
   {
-    "question": "Un transistor bipolar está compuesto por:",
-    "answers": [
-      "Base, colector y drenador",
-      "Emisor, base y colector",
-      "Fuente, base y emisor",
-      "Emisor, colector y puerta"
+    "id": "8ca11232-e99e-4766-aa4b-d6aa64d7edd2",
+    "original_id": "477",
+    "title": {
+      "text": "El producto de 13 voltios por 1 amperio son:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "13 vatios",
+        "image": null
+      },
+      {
+        "text": "13 amperios",
+        "image": null
+      },
+      {
+        "text": "13 ohmios",
+        "image": null
+      },
+      {
+        "text": "13 faradios",
+        "image": null
+      }
     ],
-    "correct_answer": "Emisor, base y colector",
-    "correct_index": 1,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 0,
+    "is_image_question": false
   },
   {
-    "question": "La característica de un filtro denominada como “frecuencia de corte” es:",
-    "answers": [
-      "La frecuencia central del filtro",
-      "El primer armónico de la frecuencia a la que el filtro deja de funcionar",
-      "La frecuencia que delimita la banda de paso o no paso por el filtro",
-      "Un dato irrelevante para el filtro"
+    "id": "49bc3e46-32ff-4c2d-bc34-c78a7ba2c9c2",
+    "original_id": "260",
+    "title": {
+      "text": "¿Qué banda de frecuencias presenta mejores condiciones para la propagación por reflexión ionosférica?",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "HF",
+        "image": null
+      },
+      {
+        "text": "UHF",
+        "image": null
+      },
+      {
+        "text": "SHF",
+        "image": null
+      },
+      {
+        "text": "EHF",
+        "image": null
+      }
     ],
-    "correct_answer": "La frecuencia que delimita la banda de paso o no paso por el filtro",
-    "correct_index": 2,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 0,
+    "is_image_question": false
   },
   {
-    "question": "En un circuito eléctrico de corriente continua:",
-    "answers": [
-      "La intensidad está en razón inversa a la tensión",
-      "La resistencia es variable con la tensión",
-      "La intensidad está en razón directa a la tensión",
-      "La capacidad del circuito disminuye"
+    "id": "4f2b47c1-b76c-4ced-9f54-234aee878b64",
+    "original_id": "243",
+    "title": {
+      "text": "Para evitar interferencias en los altavoces de un equipo de baja frecuencia, se debe:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Utilizar para su conexión cable de igual longitud de onda que la señal interferente",
+        "image": null
+      },
+      {
+        "text": "Conectar a masa los terminales del altavoz",
+        "image": null
+      },
+      {
+        "text": "Conectar un diodo detector entre los terminales del altavoz",
+        "image": null
+      },
+      {
+        "text": "Utilizar para su conexión cable blindado",
+        "image": null
+      }
     ],
-    "correct_answer": "La intensidad está en razón directa a la tensión",
-    "correct_index": 2,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 3,
+    "is_image_question": false
   },
   {
-    "question": "¿Para qué se ponen \"circuitos de filtrado\" en la salidas de las fuentes de alimentación?:",
-    "answers": [
-      "Para impedir señales espúreas en la entrada de la fuente",
-      "Para protección de los bobinados",
-      "Para reducir el rizado de la señal de salida y obtener un valor más constante de esta",
-      "Para igualar la señal de salida a la de entrada"
+    "id": "74324058-7531-4b43-a69b-9e3137ff4d42",
+    "original_id": "139",
+    "title": {
+      "text": "Se conoce como \"frecuencia de corte\" de una guía de onda a:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "La frecuencia por debajo de la cual no es posible la transmisión en la guía de onda",
+        "image": null
+      },
+      {
+        "text": "La frecuencia máxima de la transmisión",
+        "image": null
+      },
+      {
+        "text": "La frecuencia intermedia",
+        "image": null
+      },
+      {
+        "text": "La frecuencia con la que debe cortarse la guía para la transmisión",
+        "image": null
+      }
     ],
-    "correct_answer": "Para reducir el rizado de la señal de salida y obtener un valor más constante de esta",
-    "correct_index": 2,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 0,
+    "is_image_question": false
   },
   {
-    "question": "Se denomina rendimiento de un transmisor:",
-    "answers": [
-      "La relación entre la potencia entregada y la reflejada",
-      "La capacidad de detectar señales cercanas al nivel de ruido",
-      "La relación entre la potencia entregada al sistema radiante y la consumida",
-      "Al valor correspondiente al 99% de la potencia emitida por el transmisor"
+    "id": "6d00c20e-c8f9-4f40-8ff3-d3d8863d9a9d",
+    "original_id": "9",
+    "title": {
+      "text": "La R.O.E. de una instalación de una antena de radioaficionado se expresa con la fórmula:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Intensidad máxima / intensidad media",
+        "image": null
+      },
+      {
+        "text": "Intensidad mínima / intensidad máxima",
+        "image": null
+      },
+      {
+        "text": "Siempre vale 1",
+        "image": null
+      },
+      {
+        "text": "Intensidad máxima / intensidad mínima",
+        "image": null
+      }
     ],
-    "correct_answer": "La relación entre la potencia entregada al sistema radiante y la consumida",
-    "correct_index": 2,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 3,
+    "is_image_question": false
   },
   {
-    "question": "Una antena YAGI es:",
-    "answers": [
-      "Rómbica",
-      "Directiva",
-      "Vertical con plano de tierra",
-      "Parabólica"
+    "id": "aeb238d4-83b4-409d-a09c-dd08b9980dde",
+    "original_id": "366",
+    "title": {
+      "text": "La velocidad de propagación de las ondas electromagnéticas:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "En el vacío es menor que a través del aire",
+        "image": null
+      },
+      {
+        "text": "Aumenta con la frecuencia",
+        "image": null
+      },
+      {
+        "text": "Disminuye con la frecuencia",
+        "image": null
+      },
+      {
+        "text": "Es constante en un determinado medio",
+        "image": null
+      }
     ],
-    "correct_answer": "Directiva",
-    "correct_index": 1,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 3,
+    "is_image_question": false
   },
   {
-    "question": "Indique que factores influyen en cualquier comunicación radioeléctrica:",
-    "answers": [
-      "La polarización de la señal radioeléctrica",
-      "La potencia y la frecuencia de emisión",
-      "La ubicación de las antenas transmisora y receptora",
-      "Todos los anteriores"
+    "id": "685bf2b6-60d2-495a-bf66-d6444af351cc",
+    "original_id": "250",
+    "title": {
+      "text": "A la frecuencia de resonancia las reactancias inductiva y capacitiva de un circuito se igualan, el cuadrado de esta frecuencia es:",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Directamente proporcional a la inductancia de la bobina",
+        "image": null
+      },
+      {
+        "text": "Directamente proporcional a la capacidad del condensador",
+        "image": null
+      },
+      {
+        "text": "Inversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador",
+        "image": null
+      },
+      {
+        "text": "Cero",
+        "image": null
+      }
     ],
-    "correct_answer": "Todos los anteriores",
-    "correct_index": 3,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 2,
+    "is_image_question": false
   },
   {
-    "question": "El campo eléctrico se expresa en:",
-    "answers": [
-      "V.m",
-      "W/m",
-      "Q/s",
-      "V/m"
+    "id": "8f48de95-5dda-43b3-9ca9-99460fff7f4a",
+    "original_id": "367",
+    "title": {
+      "text": "En una emisión de banda lateral única (SSB):",
+      "image": null
+    },
+    "options": [
+      {
+        "text": "Se tiene una sola banda lateral sin portadora",
+        "image": null
+      },
+      {
+        "text": "Se tiene una única banda lateral más la portadora",
+        "image": null
+      },
+      {
+        "text": "La portadora esta modulada en frecuencia",
+        "image": null
+      },
+      {
+        "text": "La portadora está desfasada 180º respecto a la única banda lateral",
+        "image": null
+      }
     ],
-    "correct_answer": "V/m",
-    "correct_index": 3,
-    "image": null,
-    "is_image_question": false,
-    "answer_images": null
+    "correct_option": 0,
+    "is_image_question": false
   }
 ]

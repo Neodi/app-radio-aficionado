@@ -1,3 +1,6 @@
+"""
+Entidades del dominio para el sistema de cuestionarios de radioaficionados.
+"""
 from pydantic import BaseModel, Field, validator
 from typing import List, Optional
 from uuid import uuid4, UUID

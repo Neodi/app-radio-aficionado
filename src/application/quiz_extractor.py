@@ -5,7 +5,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from image_downloader import download_question_image, download_option_images
+from ..infrastructure.image_downloader import download_question_image, download_option_images
 
 
 def extract_question_title(question):

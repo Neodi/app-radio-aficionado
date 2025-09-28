@@ -11,7 +11,5 @@ wheels/
 
 # Private
 .env
-preguntas/imagenes/
-
-# Auxiliar files
-web_base/
+assets/
+data/

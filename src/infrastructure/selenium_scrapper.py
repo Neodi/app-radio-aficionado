@@ -4,9 +4,9 @@ Ahora refactorizado en módulos más pequeños y manejables.
 """
 import os
 from dotenv import load_dotenv
-from driver_config import setup_driver, deny_cookies
-from quiz_extractor import extract_quiz_data
-from data_saver import save_quiz_data_to_json
+from .driver_config import setup_driver, deny_cookies
+from ..application.quiz_extractor import extract_quiz_data
+from .data_saver import save_quiz_data_to_json
 
 def main():
     """Función principal para ejecutar el scraping."""

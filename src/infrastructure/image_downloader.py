@@ -14,9 +14,9 @@ def download_image(image_url, filename):
         response.raise_for_status()
         
         # Crear directorio si no existe
-        os.makedirs("preguntas/imagenes", exist_ok=True)
+        os.makedirs("assets/images", exist_ok=True)
         
-        with open(f"preguntas/imagenes/{filename}", "wb") as file:
+        with open(f"assets/images/{filename}", "wb") as file:
             file.write(response.content)
         
         print(f"Imagen descargada: {filename}")

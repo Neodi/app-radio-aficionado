@@ -5,7 +5,7 @@ import json
 import os
 
 
-def save_quiz_data_to_json(quiz_data, filename="preguntas/quiz_data.json"):
+def save_quiz_data_to_json(quiz_data, filename="data/questions.json"):
     """Guarda los datos del cuestionario en un archivo JSON."""
     try:
         # Crear directorio si no existe

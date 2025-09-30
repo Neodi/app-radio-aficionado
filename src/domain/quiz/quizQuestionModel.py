@@ -5,54 +5,59 @@ from pathlib import Path
 
 import hashlib
 
-# Constantes para las rutas de imágenes
-QUESTIONS_IMAGE_DIR = Path("assets") / "images" / "questions"
-OPTIONS_IMAGE_DIR = Path("assets") / "images" / "options"
+# Función para obtener rutas dinámicas basadas en categoría
+def get_questions_image_dir(category: str) -> Path:
+    """Retorna el directorio de imágenes de preguntas para la categoría dada"""
+    return Path("assets") / "images" / "questions" / category
+
+def get_options_image_dir(category: str) -> Path:
+    """Retorna el directorio de imágenes de opciones para la categoría dada"""
+    return Path("assets") / "images" / "options" / category
 
 class Title(BaseModel):
     titleText: str
     titleImage: Optional[str] = None
 
-    @property
-    def image_full_path(self) -> Optional[Path]:
+    def image_full_path(self, category: str) -> Optional[Path]:
+        """Retorna la ruta completa de la imagen basada en la categoría"""
         if not self.titleImage:
             return None
-        return QUESTIONS_IMAGE_DIR / self.titleImage
+        return get_questions_image_dir(category) / self.titleImage
         
-    @property
-    def image_exists(self) -> bool:
+    def image_exists(self, category: str) -> bool:
+        """Verifica si la imagen existe para la categoría dada"""
         if not self.titleImage:
             return True
         else:
-            return self.image_full_path.exists() 
+            return self.image_full_path(category).exists() 
 
 class Option(BaseModel):
     optionText: Optional[str]
     optionImage: Optional[str] = None
 
-    @property
-    def image_full_path(self) -> Optional[Path]:
+    def image_full_path(self, category: str) -> Optional[Path]:
+        """Retorna la ruta completa de la imagen basada en la categoría"""
         if not self.optionImage:
             return None
-        return OPTIONS_IMAGE_DIR / self.optionImage
+        return get_options_image_dir(category) / self.optionImage
     
-    @property
-    def image_exists(self) -> bool:
+    def image_exists(self, category: str) -> bool:
+        """Verifica si la imagen existe para la categoría dada"""
         if not self.optionImage:
             return True
-        return self.image_full_path.exists()
+        return self.image_full_path(category).exists()
 
 class QuizQuestion(BaseModel):
     id: str
     title: Title
     options: List[Option]
     correct_option: int
-
+    category: str  # Nueva propiedad para la categoría/temática
 
     def __init__(self, **data):
-            if 'id' not in data or not data['id']:
-                data['id'] = str(uuid4())
-            super().__init__(**data)
+        if 'id' not in data or not data['id']:
+            data['id'] = str(uuid4())
+        super().__init__(**data)
 
     @property
     def fingerprint(self) -> str:
@@ -60,7 +65,8 @@ class QuizQuestion(BaseModel):
         content = {
              "title" : self.title.titleText.strip().lower(),
              "options": [opt.optionText.strip().lower() for opt in self.options if opt.optionText],
-             "correct_option" : self.correct_option
+             "correct_option" : self.correct_option,
+             "category": self.category
         }
         content_str = str(sorted(content.items()))
         return hashlib.md5(content_str.encode()).hexdigest()
@@ -68,3 +74,11 @@ class QuizQuestion(BaseModel):
     @property
     def title_hash(self) -> str:
         return hashlib.md5(self.title.titleText.strip().lower().encode()).hexdigest()
+    
+    def get_questions_image_dir(self) -> Path:
+        """Retorna el directorio de imágenes de preguntas para esta pregunta"""
+        return get_questions_image_dir(self.category)
+    
+    def get_options_image_dir(self) -> Path:
+        """Retorna el directorio de imágenes de opciones para esta pregunta"""
+        return get_options_image_dir(self.category)

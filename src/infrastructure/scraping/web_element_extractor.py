@@ -30,11 +30,11 @@ class WebElementExtractor:
         return [label.text.strip() for label in answer_labels]
 
     @staticmethod
-    def extract_image_answers(question_element, question_id):
+    def extract_image_answers(question_element, question_id, category: str = "default"):
         """Extrae las respuestas de imagen de una pregunta con opciones de imagen."""
         answer_containers = question_element.find_elements(By.CLASS_NAME, "quiz-question-answer-holder")
         answers = []
-        answer_images = download_option_images(answer_containers, question_id)
+        answer_images = download_option_images(answer_containers, question_id, category)
         
         for j in range(len(answer_containers)):
             answers.append(f"Opción {j+1}")
@@ -93,7 +93,7 @@ class WebElementExtractor:
             print(f"❌ Error al obtener elementos de pregunta: {e}")
             return []
 
-    def extract_raw_question_data(self, question_element, question_index, driver):
+    def extract_raw_question_data(self, question_element, question_index, driver, category: str = "default"):
         """Extrae datos en bruto de un elemento de pregunta (sin crear modelos de dominio)."""
         # Obtener información básica
         question_id = question_element.get_attribute("data-question-id")
@@ -101,11 +101,11 @@ class WebElementExtractor:
         is_img_question = self.is_image_question(question_element)
         
         # Descargar imagen de la pregunta si existe
-        question_image = download_question_image(question_element, question_id)
+        question_image = download_question_image(question_element, question_id, category)
         
         # Extraer respuestas según el tipo de pregunta
         if is_img_question:
-            answers, answer_images = self.extract_image_answers(question_element, question_id)
+            answers, answer_images = self.extract_image_answers(question_element, question_id, category)
         else:
             answers = self.extract_text_answers(question_element)
             answer_images = None

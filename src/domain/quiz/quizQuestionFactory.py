@@ -17,7 +17,8 @@ class QuizQuestionFactory:
         answer_images: Optional[List[str]],
         correct_index: Optional[int],
         is_img_question: bool = False,
-        question_index: int = 0
+        question_index: int = 0,
+        category: str = "default"
     ) -> QuizQuestion:
         """
         Crea un objeto QuizQuestion validado a partir de datos en bruto.
@@ -30,6 +31,7 @@ class QuizQuestionFactory:
             correct_index: Índice de la respuesta correcta
             is_img_question: Si es pregunta con imágenes
             question_index: Índice de la pregunta (para logging)
+            category: Categoría/temática de la pregunta (radioelectricidad, normativa, etc.)
             
         Returns:
             QuizQuestion: Objeto validado del dominio
@@ -62,7 +64,8 @@ class QuizQuestionFactory:
             quiz_question = QuizQuestion(
                 title=title,
                 options=options,
-                correct_option=validated_correct_index
+                correct_option=validated_correct_index,
+                category=category
             )
             
             return quiz_question
@@ -71,7 +74,7 @@ class QuizQuestionFactory:
             print(f"❌ Error creando objeto QuizQuestion para pregunta {question_index + 1}: {e}")
             # Fallback: crear un objeto mínimo válido
             return QuizQuestionFactory._create_fallback_question(
-                question_title, question_image, answers
+                question_title, question_image, answers, category
             )
     
     @staticmethod
@@ -86,7 +89,8 @@ class QuizQuestionFactory:
     def _create_fallback_question(
         question_title: str, 
         question_image: Optional[str], 
-        answers: List[str]
+        answers: List[str],
+        category: str = "default"
     ) -> QuizQuestion:
         """Crea un objeto QuizQuestion de fallback cuando falla la creación normal."""
         fallback_options = [
@@ -100,5 +104,6 @@ class QuizQuestionFactory:
                 titleImage=question_image
             ),
             options=fallback_options,
-            correct_option=0
+            correct_option=0,
+            category=category
         )

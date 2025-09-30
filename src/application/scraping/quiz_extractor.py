@@ -15,14 +15,14 @@ class QuizExtractionService:
         self.web_extractor = WebElementExtractor()
         self.question_factory = QuizQuestionFactory()
     
-    def extract_single_question_data(self, question_element, question_index, driver) -> QuizQuestion:
+    def extract_single_question_data(self, question_element, question_index, driver, category: str = "default") -> QuizQuestion:
         """
         Extrae y procesa una sola pregunta.
         Orquesta entre infraestructura (extracción web) y dominio (creación de modelos).
         """
         # 1. Extraer datos en bruto usando infraestructura
         raw_data = self.web_extractor.extract_raw_question_data(
-            question_element, question_index, driver
+            question_element, question_index, driver, category
         )
         
         # 2. Crear modelo de dominio usando factory
@@ -33,7 +33,8 @@ class QuizExtractionService:
             answer_images=raw_data['answer_images'],
             correct_index=raw_data['correct_index'],
             is_img_question=raw_data['is_img_question'],
-            question_index=raw_data['question_index']
+            question_index=raw_data['question_index'],
+            category=category
         )
         
         # 3. Log de progreso
@@ -43,7 +44,7 @@ class QuizExtractionService:
         
         return quiz_question
     
-    def extract_quiz_data(self, driver) -> Optional[List[QuizQuestion]]:
+    def extract_quiz_data(self, driver, category: str = "default") -> Optional[List[QuizQuestion]]:
         """
         Extrae todos los datos del cuestionario de la página.
         Punto de entrada principal del servicio.
@@ -59,10 +60,10 @@ class QuizExtractionService:
             # 2. Procesar cada pregunta
             quiz_data = []
             for i, question_element in enumerate(question_elements):
-                question_data = self.extract_single_question_data(question_element, i, driver)
+                question_data = self.extract_single_question_data(question_element, i, driver, category)
                 quiz_data.append(question_data)
 
-            print(f"\n✅ Extracción completada: {len(quiz_data)} preguntas procesadas")
+            print(f"\n✅ Extracción completada: {len(quiz_data)} preguntas procesadas para categoría '{category}'")
             return quiz_data
 
         except Exception as e:
@@ -71,7 +72,7 @@ class QuizExtractionService:
 
 
 # Función de conveniencia para mantener compatibilidad con código existente
-def extract_quiz_data(driver) -> Optional[List[QuizQuestion]]:
+def extract_quiz_data(driver, category: str = "default") -> Optional[List[QuizQuestion]]:
     """Función de conveniencia que usa el servicio de aplicación."""
     service = QuizExtractionService()
-    return service.extract_quiz_data(driver)
+    return service.extract_quiz_data(driver, category)

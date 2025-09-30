@@ -39,17 +39,35 @@ from ...infrastructure.scraping.duplicate_detector import DuplicateDetector
 #         return False
 
 
-def save_quiz_data_to_json(quiz_data: List[QuizQuestion], file_path: str = "data/questions.json") -> int:
+def save_quiz_data_to_json(quiz_data: List[QuizQuestion], category: str = None, file_path: str = None) -> int:
     """
     Guarda datos del quiz en JSON con detección de duplicados.
+    
+    Args:
+        quiz_data: Lista de preguntas del quiz
+        category: Categoría de las preguntas (radioelectricidad, normativa, etc.)
+        file_path: Ruta del archivo (opcional, se generará automáticamente si no se proporciona)
+    
+    Returns:
+        int: Número de preguntas nuevas guardadas (-1 si hay error)
     """
     try:
-        print("🔍 Iniciando detección de duplicados...")
+        # Determinar la categoría y ruta del archivo
+        if not category and quiz_data:
+            category = quiz_data[0].category
+        
+        if not file_path:
+            if category:
+                file_path = f"data/questions_{category}.json"
+            else:
+                file_path = "data/questions.json"
+        
+        print(f"🔍 Iniciando detección de duplicados para categoría: {category}")
         duplicate_detector = DuplicateDetector(data_path=file_path)
         unique_questions = duplicate_detector.filter_duplicates(quiz_data)
 
         if not unique_questions:
-            print("ℹ️--- No hay preguntas nuevas para guardar")
+            print(f"ℹ️ No hay preguntas nuevas para guardar en categoría: {category}")
             return 0
         
         existing_data = []
@@ -64,7 +82,7 @@ def save_quiz_data_to_json(quiz_data: List[QuizQuestion], file_path: str = "data
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(all_data, f, ensure_ascii=False, indent=2)
         
-        print(f"✅ Guardadas {len(unique_questions)} preguntas nuevas")
+        print(f"✅ Guardadas {len(unique_questions)} preguntas nuevas en: {file_path}")
         print(f"📁 Total en archivo: {len(all_data)} preguntas")
 
         return len(unique_questions)

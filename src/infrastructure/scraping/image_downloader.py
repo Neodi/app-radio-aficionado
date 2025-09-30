@@ -5,7 +5,7 @@ import os
 import requests
 from urllib.parse import urlparse
 from selenium.webdriver.common.by import By
-from src.domain.quiz.quizQuestionModel import QUESTIONS_IMAGE_DIR, OPTIONS_IMAGE_DIR
+from src.domain.quiz.quizQuestionModel import get_questions_image_dir, get_options_image_dir
 
 
 def download_image(image_url, filename, target_dir):
@@ -41,7 +41,7 @@ def get_image_filename(image_url, question_id, image_type="pregunta", option_ind
         return f"imagen_{question_id}.{file_extension}"
 
 
-def download_question_image(question, question_id):
+def download_question_image(question, question_id, category: str = "default"):
     """Descarga la imagen asociada a una pregunta si existe."""
     try:
         image_element = question.find_element(By.CSS_SELECTOR, ".quiz-question-image img")
@@ -49,9 +49,10 @@ def download_question_image(question, question_id):
         
         if image_url:
             image_filename = get_image_filename(image_url, question_id)
-            if download_image(image_url, image_filename, QUESTIONS_IMAGE_DIR):
+            questions_dir = get_questions_image_dir(category)
+            if download_image(image_url, image_filename, questions_dir):
                 # Devolver la ruta relativa completa como la espera el modelo
-                return str(QUESTIONS_IMAGE_DIR / image_filename).replace("\\", "/")
+                return str(questions_dir / image_filename).replace("\\", "/")
     except:
         # No hay imagen en esta pregunta
         pass
@@ -59,7 +60,7 @@ def download_question_image(question, question_id):
     return None
 
 
-def download_option_images(answer_containers, question_id):
+def download_option_images(answer_containers, question_id, category: str = "default"):
     """Descarga las imágenes de las opciones de respuesta."""
     answer_images = []
     
@@ -69,10 +70,11 @@ def download_option_images(answer_containers, question_id):
             img_url = img_element.get_attribute("src")
             
             option_filename = get_image_filename(img_url, question_id, "opcion", j)
+            options_dir = get_options_image_dir(category)
             
-            if download_image(img_url, option_filename, OPTIONS_IMAGE_DIR):
+            if download_image(img_url, option_filename, options_dir):
                 # Devolver la ruta relativa completa para opciones
-                answer_images.append(str(OPTIONS_IMAGE_DIR / option_filename).replace("\\", "/"))
+                answer_images.append(str(options_dir / option_filename).replace("\\", "/"))
             else:
                 answer_images.append(None)
                 

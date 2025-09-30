@@ -4,7 +4,7 @@ Este es el punto de entrada desde la capa de presentación.
 """
 from typing import Optional, List
 from ...domain.quiz.quizQuestionModel import QuizQuestion
-from ...infrastructure.scraping.driver_config import setup_driver, deny_cookies
+from ...infrastructure.scraping.driver_config import setup_driver, deny_cookies, refresh_exam
 from .quiz_extractor import QuizExtractionService
 from ...infrastructure.scraping.data_saver import save_quiz_data_to_json
 from ...shared.create_proyect_structure import create_project_structure
@@ -51,20 +51,58 @@ class ScrapingUseCase:
                 driver.get(target_url)
                 deny_cookies(driver)
                 
-                # 4. Extraer datos usando el servicio de aplicación
-                quiz_data = self.quiz_extraction_service.extract_quiz_data(driver)
+                # 4. Bucle principal de scraping hasta que no haya preguntas nuevas
+                consecutive_empty_rounds = 0
+                max_empty_rounds = 3
+                total_questions_found = 0
+                round_number = 1
                 
-                # 5. Guardar resultados
-                if quiz_data:
-                    success = save_quiz_data_to_json(quiz_data)
-                    if success:
-                        print(f"✅ Scraping completado exitosamente: {len(quiz_data)} preguntas extraídas")
-                        return True
+                print(f"🔄 Iniciando scraping continuo (máximo {max_empty_rounds} rondas consecutivas sin nuevas preguntas)")
+                
+                while consecutive_empty_rounds < max_empty_rounds:
+                    print(f"\n--- RONDA {round_number} ---")
+                    
+                    # Extraer datos usando el servicio de aplicación
+                    quiz_data = self.quiz_extraction_service.extract_quiz_data(driver)
+                    
+                    if not quiz_data:
+                        # No se pudieron extraer datos - contar como ronda vacía
+                        consecutive_empty_rounds += 1
+                        print(f"⚠️ No se pudieron extraer datos (intento {consecutive_empty_rounds}/{max_empty_rounds})")
+                        round_number += 1
+                        continue
+                    
+                    # Guardar resultados
+                    new_questions_count = save_quiz_data_to_json(quiz_data)
+                    
+                    if new_questions_count > 0:
+                        # Se encontraron preguntas nuevas - resetear contador
+                        consecutive_empty_rounds = 0
+                        total_questions_found += new_questions_count
+                        print(f"✅ Ronda {round_number}: {new_questions_count} preguntas nuevas encontradas")
+                    elif new_questions_count == 0:
+                        # No hay preguntas nuevas - incrementar contador
+                        consecutive_empty_rounds += 1
+                        print(f"ℹ️ Ronda {round_number}: No se encontraron preguntas nuevas (intento {consecutive_empty_rounds}/{max_empty_rounds})")
                     else:
-                        print("❌ Error al guardar los datos")
-                        return False
+                        # Error al guardar (-1) - contar como ronda vacía
+                        consecutive_empty_rounds += 1
+                        print(f"❌ Ronda {round_number}: Error al guardar datos (intento {consecutive_empty_rounds}/{max_empty_rounds})")
+                    
+                    round_number += 1
+                    refresh_exam(driver)
+
+
+                
+                # 5. Resultado final
+                if total_questions_found > 0:
+                    print(f"\n🎉 Scraping completado exitosamente!")
+                    print(f"📊 Total de preguntas nuevas encontradas: {total_questions_found}")
+                    print(f"🔄 Rondas ejecutadas: {round_number - 1}")
+                    return True
                 else:
-                    print("❌ No se pudieron extraer datos del cuestionario")
+                    print(f"\n⚠️ Scraping finalizado sin encontrar preguntas nuevas")
+                    print(f"🔄 Rondas ejecutadas: {round_number - 1}")
                     return False
                     
             finally:

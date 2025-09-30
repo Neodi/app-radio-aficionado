@@ -39,7 +39,7 @@ from ...infrastructure.scraping.duplicate_detector import DuplicateDetector
 #         return False
 
 
-def save_quiz_data_to_json(quiz_data: List[QuizQuestion], file_path: str = "data/questions.json") -> bool:
+def save_quiz_data_to_json(quiz_data: List[QuizQuestion], file_path: str = "data/questions.json") -> int:
     """
     Guarda datos del quiz en JSON con detección de duplicados.
     """
@@ -49,8 +49,8 @@ def save_quiz_data_to_json(quiz_data: List[QuizQuestion], file_path: str = "data
         unique_questions = duplicate_detector.filter_duplicates(quiz_data)
 
         if not unique_questions:
-            print("ℹ️ No hay preguntas nuevas para guardar")
-            return True
+            print("ℹ️--- No hay preguntas nuevas para guardar")
+            return 0
         
         existing_data = []
         if os.path.exists(file_path):
@@ -67,11 +67,11 @@ def save_quiz_data_to_json(quiz_data: List[QuizQuestion], file_path: str = "data
         print(f"✅ Guardadas {len(unique_questions)} preguntas nuevas")
         print(f"📁 Total en archivo: {len(all_data)} preguntas")
 
-        return True
+        return len(unique_questions)
     
     except Exception as e:
         print(f"❌ Error al guardar datos: {e}")
-        return False
+        return -1
 
 
 def print_quiz_summary(quiz_data: List[QuizQuestion]):

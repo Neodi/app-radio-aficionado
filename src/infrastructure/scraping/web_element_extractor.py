@@ -74,7 +74,7 @@ class WebElementExtractor:
         try:
             first_radio = question_element.find_element(By.CLASS_NAME, "quiz-question-answer-ctrl")
             driver.execute_script("arguments[0].click();", first_radio)
-            time.sleep(0.25)  # Esperar a que se procese la respuesta
+            time.sleep(0.10)  # Esperar a que se procese la respuesta
         except Exception as e:
             print(f"Error al revelar respuesta: {e}")
 

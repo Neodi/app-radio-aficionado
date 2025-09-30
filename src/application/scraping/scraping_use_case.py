@@ -7,6 +7,7 @@ from ...domain.quiz.quizQuestionModel import QuizQuestion
 from ...infrastructure.scraping.driver_config import setup_driver, deny_cookies
 from .quiz_extractor import QuizExtractionService
 from ...infrastructure.scraping.data_saver import save_quiz_data_to_json
+from ...shared.create_proyect_structure import create_project_structure
 import os
 from dotenv import load_dotenv
 
@@ -32,6 +33,7 @@ class ScrapingUseCase:
         """
         try:
             # 1. Configuración inicial
+            create_project_structure()
             load_dotenv()
             target_url = url or os.getenv("URL_BASE")
             

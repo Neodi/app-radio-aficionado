@@ -5,36 +5,72 @@ import json
 import os
 from typing import List
 from src.domain.quiz.quizQuestionModel import QuizQuestion
+from ...infrastructure.scraping.duplicate_detector import DuplicateDetector
 
 
-def save_quiz_data_to_json(quiz_data: List[QuizQuestion], filename="data/questions.json") -> bool:
-    """
-    Guarda los datos del cuestionario en un archivo JSON.
+# def save_quiz_data_to_json(quiz_data: List[QuizQuestion], filename="data/questions.json") -> bool:
+#     """
+#     Guarda los datos del cuestionario en un archivo JSON.
     
-    Returns:
-        bool: True si el guardado fue exitoso, False en caso contrario
+#     Returns:
+#         bool: True si el guardado fue exitoso, False en caso contrario
+#     """
+#     try:
+#         # Crear directorio si no existe
+#         os.makedirs(os.path.dirname(filename), exist_ok=True)
+        
+#         # Convertir objetos Pydantic a diccionarios para JSON
+#         quiz_data_dict = []
+#         for question in quiz_data:
+#             # Usar model_dump() de Pydantic v2 para serializar
+#             question_dict = question.model_dump()
+#             quiz_data_dict.append(question_dict)
+        
+#         # Guardar datos en JSON
+#         with open(filename, "w", encoding="utf-8") as file:
+#             json.dump(quiz_data_dict, file, indent=2, ensure_ascii=False)
+        
+#         print(f"✅ Datos guardados en '{filename}'")
+#         print(f"📊 Total de preguntas guardadas: {len(quiz_data)}")
+#         return True
+
+#     except Exception as e:
+#         print(f"❌ Error al guardar los datos en JSON: {e}")
+#         return False
+
+
+def save_quiz_data_to_json(quiz_data: List[QuizQuestion], file_path: str = "data/questions.json") -> bool:
+    """
+    Guarda datos del quiz en JSON con detección de duplicados.
     """
     try:
-        # Crear directorio si no existe
-        os.makedirs(os.path.dirname(filename), exist_ok=True)
-        
-        # Convertir objetos Pydantic a diccionarios para JSON
-        quiz_data_dict = []
-        for question in quiz_data:
-            # Usar model_dump() de Pydantic v2 para serializar
-            question_dict = question.model_dump()
-            quiz_data_dict.append(question_dict)
-        
-        # Guardar datos en JSON
-        with open(filename, "w", encoding="utf-8") as file:
-            json.dump(quiz_data_dict, file, indent=2, ensure_ascii=False)
-        
-        print(f"✅ Datos guardados en '{filename}'")
-        print(f"📊 Total de preguntas guardadas: {len(quiz_data)}")
-        return True
+        print("🔍 Iniciando detección de duplicados...")
+        duplicate_detector = DuplicateDetector(data_path=file_path)
+        unique_questions = duplicate_detector.filter_duplicates(quiz_data)
 
+        if not unique_questions:
+            print("ℹ️ No hay preguntas nuevas para guardar")
+            return True
+        
+        existing_data = []
+        if os.path.exists(file_path):
+            with open(file_path, 'r', encoding='utf-8') as f:
+                existing_data =  json.load(f)
+
+        new_data = [question.model_dump() for question in unique_questions]
+        all_data = existing_data + new_data
+
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(all_data, f, ensure_ascii=False, indent=2)
+        
+        print(f"✅ Guardadas {len(unique_questions)} preguntas nuevas")
+        print(f"📁 Total en archivo: {len(all_data)} preguntas")
+
+        return True
+    
     except Exception as e:
-        print(f"❌ Error al guardar los datos en JSON: {e}")
+        print(f"❌ Error al guardar datos: {e}")
         return False
 
 

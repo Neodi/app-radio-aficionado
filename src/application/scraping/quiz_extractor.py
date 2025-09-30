@@ -39,7 +39,7 @@ class QuizExtractionService:
         # 3. Log de progreso
         question_type = 'Imágenes' if raw_data['is_img_question'] else 'Texto'
         correct_preview = raw_data['correct_answer'][:30] if raw_data['correct_answer'] else 'No encontrada'
-        print(f"Pregunta {question_index + 1}: {raw_data['question_title'][:50]}... | Correcta: {correct_preview}... | Tipo: {question_type}")
+        # print(f"Pregunta {question_index + 1}: {raw_data['question_title'][:50]}... | Correcta: {correct_preview}... | Tipo: {question_type}")
         
         return quiz_question
     

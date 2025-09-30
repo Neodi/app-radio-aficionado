@@ -5,21 +5,23 @@ import os
 import requests
 from urllib.parse import urlparse
 from selenium.webdriver.common.by import By
+from src.domain.quiz.quizQuestionModel import QUESTIONS_IMAGE_DIR, OPTIONS_IMAGE_DIR
 
 
-def download_image(image_url, filename):
-    """Descarga una imagen desde una URL."""
+def download_image(image_url, filename, target_dir):
+    """Descarga una imagen desde una URL en el directorio especificado."""
     try:
         response = requests.get(image_url)
         response.raise_for_status()
         
         # Crear directorio si no existe
-        os.makedirs("assets/images", exist_ok=True)
+        os.makedirs(target_dir, exist_ok=True)
         
-        with open(f"assets/images/{filename}", "wb") as file:
+        filepath = target_dir / filename
+        with open(filepath, "wb") as file:
             file.write(response.content)
         
-        print(f"Imagen descargada: {filename}")
+        # print(f"Imagen descargada: {filepath}")
         return True
     except Exception as e:
         print(f"Error al descargar imagen {filename}: {e}")
@@ -47,8 +49,9 @@ def download_question_image(question, question_id):
         
         if image_url:
             image_filename = get_image_filename(image_url, question_id)
-            if download_image(image_url, image_filename):
-                return image_filename
+            if download_image(image_url, image_filename, QUESTIONS_IMAGE_DIR):
+                # Devolver la ruta relativa completa como la espera el modelo
+                return str(QUESTIONS_IMAGE_DIR / image_filename).replace("\\", "/")
     except:
         # No hay imagen en esta pregunta
         pass
@@ -67,8 +70,9 @@ def download_option_images(answer_containers, question_id):
             
             option_filename = get_image_filename(img_url, question_id, "opcion", j)
             
-            if download_image(img_url, option_filename):
-                answer_images.append(option_filename)
+            if download_image(img_url, option_filename, OPTIONS_IMAGE_DIR):
+                # Devolver la ruta relativa completa para opciones
+                answer_images.append(str(OPTIONS_IMAGE_DIR / option_filename).replace("\\", "/"))
             else:
                 answer_images.append(None)
                 

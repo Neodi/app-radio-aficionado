@@ -3,7 +3,7 @@ Caso de uso para ejecutar el proceso completo de scraping de cuestionarios.
 Este es el punto de entrada desde la capa de presentación.
 """
 from typing import Optional, List
-from ...domain.quiz.quizQuestionModel import QuizQuestion
+from ...domain.quiz.quiz_question_model import QuizQuestionModel
 from ...infrastructure.scraping.driver_config import setup_driver, deny_cookies, refresh_exam
 from .quiz_extractor import QuizExtractionService
 from ...infrastructure.scraping.data_saver import save_quiz_data_to_json

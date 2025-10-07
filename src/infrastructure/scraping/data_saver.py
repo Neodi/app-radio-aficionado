@@ -4,7 +4,7 @@ Módulo para guardar los datos del cuestionario en formato JSON.
 import json
 import os
 from typing import List
-from src.domain.quiz.quizQuestionModel import QuizQuestion
+from domain.quiz.quiz_question_model import QuizQuestionModel
 from ...infrastructure.scraping.duplicate_detector import DuplicateDetector
 
 
@@ -39,7 +39,7 @@ from ...infrastructure.scraping.duplicate_detector import DuplicateDetector
 #         return False
 
 
-def save_quiz_data_to_json(quiz_data: List[QuizQuestion], category: str = None, file_path: str = None) -> int:
+def save_quiz_data_to_json(quiz_data: List[QuizQuestionModel], category: str = None, file_path: str = None) -> int:
     """
     Guarda datos del quiz en JSON con detección de duplicados.
     
@@ -92,7 +92,7 @@ def save_quiz_data_to_json(quiz_data: List[QuizQuestion], category: str = None, 
         return -1
 
 
-def print_quiz_summary(quiz_data: List[QuizQuestion]):
+def print_quiz_summary(quiz_data: List[QuizQuestionModel]):
     """Imprime un resumen de los datos extraídos."""
     if not quiz_data:
         print("❌ No hay datos que mostrar")

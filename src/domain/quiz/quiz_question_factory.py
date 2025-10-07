@@ -3,7 +3,7 @@ Factory del dominio para crear objetos QuizQuestion validados.
 Contiene la lógica de creación y validación de entidades de dominio.
 """
 from typing import List, Optional
-from .quizQuestionModel import QuizQuestion, Title, Option
+from .quiz_question_model import QuizQuestionModel, Title, Option
 
 
 class QuizQuestionFactory:
@@ -19,7 +19,7 @@ class QuizQuestionFactory:
         is_img_question: bool = False,
         question_index: int = 0,
         category: str = "default"
-    ) -> QuizQuestion:
+    ) -> QuizQuestionModel:
         """
         Crea un objeto QuizQuestion validado a partir de datos en bruto.
         
@@ -61,7 +61,7 @@ class QuizQuestionFactory:
         
         # Crear el objeto QuizQuestion usando Pydantic con manejo de errores
         try:
-            quiz_question = QuizQuestion(
+            quiz_question = QuizQuestionModel(
                 title=title,
                 options=options,
                 correct_option=validated_correct_index,
@@ -91,14 +91,14 @@ class QuizQuestionFactory:
         question_image: Optional[str], 
         answers: List[str],
         category: str = "default"
-    ) -> QuizQuestion:
+    ) -> QuizQuestionModel:
         """Crea un objeto QuizQuestion de fallback cuando falla la creación normal."""
         fallback_options = [
             Option(optionText=f"Opción {i+1}", optionImage=None) 
             for i in range(max(2, len(answers)))
         ]
         
-        return QuizQuestion(
+        return QuizQuestionModel(
             title=Title(
                 titleText=question_title or "Pregunta sin título", 
                 titleImage=question_image

@@ -5,7 +5,7 @@ import os
 import requests
 from urllib.parse import urlparse
 from selenium.webdriver.common.by import By
-from src.domain.quiz.quizQuestionModel import get_questions_image_dir, get_options_image_dir
+from domain.quiz.quiz_question_model import get_questions_image_dir, get_options_image_dir
 
 
 def download_image(image_url, filename, target_dir):

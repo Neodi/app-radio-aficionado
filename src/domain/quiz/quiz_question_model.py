@@ -14,7 +14,7 @@ def get_options_image_dir(category: str) -> Path:
     """Retorna el directorio de imágenes de opciones para la categoría dada"""
     return Path("assets") / "images" / "options" / category
 
-class Title(BaseModel):
+class TitleModel(BaseModel):
     titleText: str
     titleImage: Optional[str] = None
 
@@ -31,7 +31,7 @@ class Title(BaseModel):
         else:
             return self.image_full_path(category).exists() 
 
-class Option(BaseModel):
+class OptionModel(BaseModel):
     optionText: Optional[str]
     optionImage: Optional[str] = None
 
@@ -47,10 +47,10 @@ class Option(BaseModel):
             return True
         return self.image_full_path(category).exists()
 
-class QuizQuestion(BaseModel):
+class QuizQuestionModel(BaseModel):
     id: str
-    title: Title
-    options: List[Option]
+    title: TitleModel
+    options: List[OptionModel]
     correct_option: int
     category: str  # Nueva propiedad para la categoría/temática
 

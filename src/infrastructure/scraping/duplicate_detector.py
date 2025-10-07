@@ -1,6 +1,6 @@
 """Servicio para detectar preguntas duplicadas"""
 from typing import List, Set, Dict
-from ...domain.quiz.quizQuestionModel import QuizQuestion
+from ...domain.quiz.quiz_question_model import QuizQuestionModel
 import json
 import os
 
@@ -21,7 +21,7 @@ class DuplicateDetector:
                     print(f"🔍 Cargando {len(existing_data)} preguntas existentes para detectar duplicados...")
                     for item in existing_data:
                         try:
-                            question = QuizQuestion(**item)
+                            question = QuizQuestionModel(**item)
                             self.existing_fingerprints.add(question.fingerprint)
                         except Exception as e:
                             print(f"⚠️ Error procesando pregunta existente: {e}")
@@ -30,7 +30,7 @@ class DuplicateDetector:
         else:
             print(f"📁 Archivo de preguntas no existe, iniciando con lista vacía")
 
-    def filter_duplicates(self, new_questions: List[QuizQuestion]) -> List[QuizQuestion]:
+    def filter_duplicates(self, new_questions: List[QuizQuestionModel]) -> List[QuizQuestionModel]:
         """Filtra preguntas duplicadas de una lista nueva"""
         unique_questions = []
         session_fingerprints = set()
@@ -59,7 +59,7 @@ class DuplicateDetector:
         
         return unique_questions
 
-    def get_duplicate_report(self, questions: List[QuizQuestion]) -> Dict:
+    def get_duplicate_report(self, questions: List[QuizQuestionModel]) -> Dict:
         """Genera un reporte de duplicados"""
         fingerprints = [q.fingerprint for q in questions]
         unique_fingerprints = set(fingerprints)

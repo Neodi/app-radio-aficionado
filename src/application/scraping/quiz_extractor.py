@@ -4,8 +4,8 @@ Orquesta la extracción web y la creación de modelos de dominio.
 """
 from typing import List, Optional
 from ...infrastructure.scraping.web_element_extractor import WebElementExtractor
-from ...domain.quiz.quizQuestionFactory import QuizQuestionFactory
-from ...domain.quiz.quizQuestionModel import QuizQuestion
+from ...domain.quiz.quiz_question_factory import QuizQuestionFactory
+from ...domain.quiz.quiz_question_model import QuizQuestionModel
 
 
 class QuizExtractionService:
@@ -15,7 +15,7 @@ class QuizExtractionService:
         self.web_extractor = WebElementExtractor()
         self.question_factory = QuizQuestionFactory()
     
-    def extract_single_question_data(self, question_element, question_index, driver, category: str = "default") -> QuizQuestion:
+    def extract_single_question_data(self, question_element, question_index, driver, category: str = "default") -> QuizQuestionModel:
         """
         Extrae y procesa una sola pregunta.
         Orquesta entre infraestructura (extracción web) y dominio (creación de modelos).
@@ -44,7 +44,7 @@ class QuizExtractionService:
         
         return quiz_question
     
-    def extract_quiz_data(self, driver, category: str = "default") -> Optional[List[QuizQuestion]]:
+    def extract_quiz_data(self, driver, category: str = "default") -> Optional[List[QuizQuestionModel]]:
         """
         Extrae todos los datos del cuestionario de la página.
         Punto de entrada principal del servicio.
@@ -72,7 +72,7 @@ class QuizExtractionService:
 
 
 # Función de conveniencia para mantener compatibilidad con código existente
-def extract_quiz_data(driver, category: str = "default") -> Optional[List[QuizQuestion]]:
+def extract_quiz_data(driver, category: str = "default") -> Optional[List[QuizQuestionModel]]:
     """Función de conveniencia que usa el servicio de aplicación."""
     service = QuizExtractionService()
     return service.extract_quiz_data(driver, category)

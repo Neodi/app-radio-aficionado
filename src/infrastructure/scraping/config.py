@@ -1,6 +1,7 @@
 """
 Configuración de rutas para el proyecto Clean Architecture
 """
+
 import os
 
 # Rutas base del proyecto
@@ -16,6 +17,7 @@ EXPORTS_DIR = os.path.join(DATA_DIR, "exports")
 ASSETS_DIR = os.path.join(PROJECT_ROOT, "assets")
 IMAGES_DIR = os.path.join(ASSETS_DIR, "images")
 
+
 # Crear directorios si no existen
 def ensure_directories():
     """Asegura que todos los directorios necesarios existan."""
@@ -23,15 +25,16 @@ def ensure_directories():
     os.makedirs(EXPORTS_DIR, exist_ok=True)
     os.makedirs(IMAGES_DIR, exist_ok=True)
 
+
 # Ejecutar al importar
 ensure_directories()
 
 # Exportar rutas para uso en otros módulos
 __all__ = [
-    'DATA_DIR',
-    'QUESTIONS_FILE', 
-    'LEGACY_QUESTIONS_FILE',
-    'EXPORTS_DIR',
-    'IMAGES_DIR',
-    'ensure_directories'
+    "DATA_DIR",
+    "QUESTIONS_FILE",
+    "LEGACY_QUESTIONS_FILE",
+    "EXPORTS_DIR",
+    "IMAGES_DIR",
+    "ensure_directories",
 ]

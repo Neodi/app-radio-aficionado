@@ -6,8 +6,44 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "beautifulsoup4>=4.13.5",
+    "black>=25.9.0",
+    "flake8>=7.3.0",
+    "pre-commit>=4.3.0",
     "pydantic>=2.11.9",
     "requests>=2.32.5",
     "selenium>=4.35.0",
     "webdriver-manager>=4.0.2",
+]
+
+# Configuración de Black
+[tool.black]
+line-length = 88
+target-version = ['py313']
+include = '\.pyi?$'
+extend-exclude = '''
+# Directorios/archivos a excluir
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations
+)/
+'''
+
+# Configuración de isort (para compatibilidad con Black)
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[dependency-groups]
+dev = [
+    "flake8-docstrings>=1.7.0",
+    "isort>=6.1.0",
+    "pre-commit>=4.3.0",
 ]

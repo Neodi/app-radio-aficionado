@@ -1,0 +1,31 @@
+[flake8]
+# Longitud máxima de línea:
+# Black usa 88 por defecto. Es CRÍTICO que este valor COINCIDA con la configuración de Black
+max-line-length = 88
+
+# Errores a ignorar para compatibilidad con Black:
+# E203: whitespace before ':' (incompatible con Black)
+# W503: line break before binary operator (estilo preferido por Black)
+# E501: line too long (Black se encarga de esto)
+ignore = E203, W503, E501, D200, D202, D205, D400, D401
+
+# Directorio de archivos a excluir
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    venv,
+    env,
+    .env,
+    build,
+    dist,
+    *.egg-info,
+    .tox,
+    .coverage,
+    .pytest_cache,
+    migrations
+
+# Extensiones adicionales (si las tienes instaladas y quieres usarlas)
+# Por ejemplo, para revisar docstrings (D) o complejidad (C901).
+max-complexity = 10
+# select = E,W,F,C,D

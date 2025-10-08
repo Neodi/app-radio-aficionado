@@ -2,13 +2,15 @@
 Factory del dominio para crear objetos QuizQuestion validados.
 Contiene la lógica de creación y validación de entidades de dominio.
 """
+
 from typing import List, Optional
-from .quiz_question_model import QuizQuestionModel, Title, Option
+
+from .quiz_question_model import OptionModel, QuizQuestionModel, TitleModel
 
 
 class QuizQuestionFactory:
     """Factory para crear objetos QuizQuestion validados y consistentes."""
-    
+
     @staticmethod
     def create_quiz_question(
         question_title: str,
@@ -18,11 +20,11 @@ class QuizQuestionFactory:
         correct_index: Optional[int],
         is_img_question: bool = False,
         question_index: int = 0,
-        category: str = "default"
+        category: str = "default",
     ) -> QuizQuestionModel:
         """
         Crea un objeto QuizQuestion validado a partir de datos en bruto.
-        
+
         Args:
             question_title: Texto de la pregunta
             question_image: URL/path de imagen de pregunta (opcional)
@@ -32,78 +34,78 @@ class QuizQuestionFactory:
             is_img_question: Si es pregunta con imágenes
             question_index: Índice de la pregunta (para logging)
             category: Categoría/temática de la pregunta (radioelectricidad, normativa, etc.)
-            
+
         Returns:
             QuizQuestion: Objeto validado del dominio
         """
         # Crear el título usando el modelo de dominio
-        title = Title(
-            titleText=question_title,
-            titleImage=question_image
-        )
-        
+        title = TitleModel(titleText=question_title, titleImage=question_image)
+
         # Crear las opciones usando el modelo de dominio
         options = []
         for i, answer in enumerate(answers):
             option_image = None
             if is_img_question and answer_images and i < len(answer_images):
                 option_image = answer_images[i]
-            
-            options.append(Option(
-                optionText=answer,
-                optionImage=option_image
-            ))
-        
+
+            options.append(OptionModel(optionText=answer, optionImage=option_image))
+
         # Validar y asegurar que tenemos un índice correcto válido
         validated_correct_index = QuizQuestionFactory._validate_correct_index(
             correct_index, len(options), question_index
         )
-        
+
         # Crear el objeto QuizQuestion usando Pydantic con manejo de errores
         try:
             quiz_question = QuizQuestionModel(
                 title=title,
                 options=options,
                 correct_option=validated_correct_index,
-                category=category
+                category=category,
             )
-            
+
             return quiz_question
-            
+
         except Exception as e:
-            print(f"❌ Error creando objeto QuizQuestion para pregunta {question_index + 1}: {e}")
+            print(
+                f"❌ Error creando objeto QuizQuestion para pregunta {question_index + 1}: {e}"
+            )
             # Fallback: crear un objeto mínimo válido
             return QuizQuestionFactory._create_fallback_question(
                 question_title, question_image, answers, category
             )
-    
+
     @staticmethod
-    def _validate_correct_index(correct_index: Optional[int], num_options: int, question_index: int) -> int:
+    def _validate_correct_index(
+        correct_index: Optional[int], num_options: int, question_index: int
+    ) -> int:
         """Valida y corrige el índice de respuesta correcta."""
         if correct_index is None or correct_index < 0 or correct_index >= num_options:
-            print(f"⚠️ Advertencia: Índice de respuesta correcta inválido para pregunta {question_index + 1}")
+            print(
+                f"⚠️ Advertencia: Índice de respuesta correcta inválido para pregunta {question_index + 1}"
+            )
             return 0  # Fallback al primer índice
         return correct_index
-    
+
     @staticmethod
     def _create_fallback_question(
-        question_title: str, 
-        question_image: Optional[str], 
+        question_title: str,
+        question_image: Optional[str],
         answers: List[str],
-        category: str = "default"
+        category: str = "default",
     ) -> QuizQuestionModel:
         """Crea un objeto QuizQuestion de fallback cuando falla la creación normal."""
         fallback_options = [
-            Option(optionText=f"Opción {i+1}", optionImage=None) 
+            OptionModel(optionText=f"Opción {i + 1}", optionImage=None)
             for i in range(max(2, len(answers)))
         ]
-        
+
         return QuizQuestionModel(
-            title=Title(
-                titleText=question_title or "Pregunta sin título", 
-                titleImage=question_image
+            title=TitleModel(
+                titleText=question_title or "Pregunta sin título",
+                titleImage=question_image,
             ),
             options=fallback_options,
             correct_option=0,
-            category=category
+            category=category,
         )

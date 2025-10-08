@@ -1,7 +1,11 @@
+"""Modelo de estadísticas del usuario."""
+
 from pydantic import BaseModel
 
 
 class StatsModel(BaseModel):
+    """Modelo de estadísticas del usuario."""
+
     all_exams: list[str]
     passed_exams: list[str]
 

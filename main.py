@@ -1,5 +1,4 @@
 """
-Script principal usando Clean Architecture.
 Punto de entrada de la aplicación que usa casos de uso.
 """
 
@@ -29,7 +28,8 @@ def main():
 
         # Ejecutar caso de uso
         use_case = ScrapingUseCase()
-        success = use_case.execute(url)
+        target_configs = [] if url is None else [{"url": url}]
+        success = use_case.execute(target_configs)
 
         if success:
             print("🎉 ¡Scraping completado exitosamente!")
